@@ -4,19 +4,92 @@
 		<title>Home Page</title>
 		<!--Javascript files-->
 		<!--<script src="/js/jquery-1.11.0.js"></script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 		<script src="/js/bootstrap.js"></script>
-		<script src="/js/bootstrap.min.js"></script>
+		<!--<script src="/js/bootstrap.min.js"></script>-->
+		<script src="https://kit.fontawesome.com/425ceb4c07.js" crossorigin="anonymous"></script>
 
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/bootstrap-theme.css" rel="stylesheet">
-		<link href="css/hci-friends.css" rel="stylesheet">
+		<link href="css/index.css" rel="stylesheet">
+
+		<!--<link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
+
 	</head>
 
-	<body>
-		<div>
+	<body style="background-color: #E5E5E5;">
+		<div class="container">
+			<header>
+				<div>
+					<div id="title">
+						<h1>Home</h1>
+					</div>
+					<div id="user">
+						<a></a><i class="far fa-user-circle fa-5x"></i>
+					</div>
+				</div>
+			</header>
+			<section>
+				<h2>This Week's Tasks</h2>
+				<div class="rounded" id="textBox">
+					<ul class="dashed">
+						<li>Trash</li>
+						<li>Parking</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<h2>Reminders</h2>
+				<div class="rounded" id="textBox">
+					text here for now
+				</div>
+			</section>
+			<!--Navigation Bar -->
+			<nav class="navbar-fixed-bottom" id="bottomNav">
+				<hr>
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target=".navbar-ex1-collapse">
+						<i class="fas fa-bars fa-2x"></i>
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
 
+				<div class="collapse navbar-collapse navbar-ex1-collapse border-top">
+					<ul class="nav" id="bottomNav">
+						<li class="text-center">
+							<a href="/" data-toggle="collapse" data-target="/">
+								<i class="fas fa-home fa-3x"></i><br>Home
+							</a>
+						</li>
+						<li class="text-center">
+							<a href="/schedule" data-toggle="collapse" data-target="#schedule">
+								<i class="far fa-calendar-alt fa-3x"></i><br>Schedule
+							</a>
+						</li>
+						<li class="text-center">
+							<a href="/messages" data-toggle="collapse" data-target="/messages">
+								<i class="fas fa-envelope fa-3x"></i><br>Messages
+							</a>
+						</li>
+						<li class="text-center">
+							<a href="/fridge" data-toggle="collapse" data-target="/fridge"><i
+									class="fas fa-utensils fa-3x"></i><br>Fridge
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<!-- end of navigation bar -->
 		</div>
+
 	</body>
 
 </html>
