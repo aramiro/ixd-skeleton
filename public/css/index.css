@@ -1,18 +1,18 @@
-div#textBox {
+div.textBox {
   background-color: white;
 }
 
-nav#bottomNav {
+nav.bottomNav {
   overflow: hidden;
   position: fixed;
   width: 100%;
 }
 
-ul#bottomNav {
+ul.bottomNav {
 	text-align: center;
 }
 
-nav#bottomNav img {
+nav.bottomNav img {
   size: 40px;
 }
 
