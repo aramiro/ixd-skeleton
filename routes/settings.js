@@ -1,8 +1,8 @@
 
 /*
- * GET schedule page.
+ * GET settings page.
  */
 
 exports.view = function(req, res){
-	res.render('schedule');
+	res.render('settings');
   };
