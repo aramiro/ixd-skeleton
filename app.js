@@ -8,12 +8,14 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 
+var login = require('./routes/login')
 var index = require('./routes/index');
 var schedule = require('./routes/schedule')
 var messages = require('./routes/messages')
 var food = require('./routes/food')
 var settings = require('./routes/settings')
 
+/*
 const { Client } = require('pg');
 
 const client = new Client({
@@ -30,7 +32,7 @@ client.query('SELECT table_schema,table_name FROM information_schema.tables;', (
   }
   client.end();
 });
-
+*/
 // Example route
 // var user = require('./routes/user');
 
@@ -65,6 +67,7 @@ app.get('/schedule', schedule.view);
 app.get('/messages', messages.view);
 app.get('/food', food.view);
 app.get('/settings', settings.view);
+app.get('/login', login.view);
 
 
 
