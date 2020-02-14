@@ -5,22 +5,24 @@
 			"firstname": "Stacy",
 			"lastname": "Kim",
 			"email": "spk004@ucsd.edu",
-			"id": "0001"
+			"id": "0001",
+			"houseID": "first"
 		},
 		{
 			"username": "alyssaramiro",
 			"firstname": "Alyssa",
 			"lastname": "Ramiro",
 			"email": "aramiro@ucsd.edu",
-			"id": "0002"
+			"id": "0002",
+			"houseID": "first"
 		},
 		{
 			"username": "apurwashulka",
 			"firstname": "Apurwa",
 			"lastname": "Shulka",
 			"email": "aashukla@ucsd.edu",
-			"id": "0003"
-		},
-
+			"id": "0003",
+			"houseID": "first"
+		}
 	]
 }
