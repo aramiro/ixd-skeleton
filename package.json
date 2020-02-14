@@ -20,10 +20,11 @@
     "@fullcalendar/timeline": "^4.3.0",
     "express": "3.x",
     "express3-handlebars": "*",
+    "json": "^9.0.6",
+    "minimatch": "^3.0.4",
     "mongodb": "*",
     "mongoose": "*",
-    "json": "^9.0.6",
-    "minimatch": "^3.0.4"
+    "pg": "^7.18.1"
   },
   "engines": {
     "node": "8.9.x"

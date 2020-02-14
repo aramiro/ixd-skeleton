@@ -14,6 +14,23 @@ var messages = require('./routes/messages')
 var food = require('./routes/food')
 var settings = require('./routes/settings')
 
+const { Client } = require('pg');
+
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
+});
+
+client.connect();
+
+client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
+  if (err) throw err;
+  for (let row of res.rows) {
+    console.log(JSON.stringify(row));
+  }
+  client.end();
+});
+
 // Example route
 // var user = require('./routes/user');
 

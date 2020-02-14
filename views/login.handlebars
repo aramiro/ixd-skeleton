@@ -21,12 +21,40 @@
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/bootstrap-theme.css" rel="stylesheet">
 		<link href="css/index.css" rel="stylesheet">
+		<link href="css/login.css" rel="stylesheet">
+
 
 		<!--<link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
 	</head>
 
 	<body>
+		<div class="container">
+			<form method="pst">
+				<div class="imgcontainer">
+					<img src="#" alt="Avatar" class="avatar">
+					<i class="far fa-user-circle fa-5x"></i>
+				</div>
 
+				<div class="container">
+					<label for="uname"><b>Username</b></label>
+					<input type="text" placeholder="Enter username" name="uname" required>
+
+					<label for="psw"><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="psw" required>
+
+					<button type="submit">Login</button>
+
+					<label>
+						<input type="checkbox" checked="checked" name="remember"> Remember me
+					</label>
+				</div>
+
+				<div class="container" style="background-color:#f1f1f1">
+					<button type="button" class="cancelbtn">Cancel</button>
+					<span class="psw">Forgot <a href="#">password?</a></span>
+				</div>
+			</form>
+		</div>
 	</body>
 
 </html>
