@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 	<head>
 		<title>Schedule</title>
 		<meta charset="utf-8">
@@ -22,8 +23,28 @@
 		<link href="css/index.css" rel="stylesheet">
 		<link href="css/schedule.css" rel="stylesheet">
 
-
 		<!--<link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
+
+
+		<!-- calendar plugin api -->
+		<script src="js/schedules.js"></script>
+		<link href='fullcalendar/packages/core/main.css' rel='stylesheet' />
+		<link href='fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
+		<link href='fullcalendar/interaction/main.css' rel='stylesheet' 
+		<link href='fullcalendar/packages/timegrid/main.css' rel='stylesheet' />
+		<link href='fullcalendar/packages/list/main.css' rel='stylesheet' />
+		<link href='fullcalendar/packages/bootstrap/main.css' rel='stylesheet' />
+
+
+		<script src='fullcalendar/packages/core/main.js'></script>
+		<script src='fullcalendar/packages/daygrid/main.js'></script>
+		<script src='fullcalendar/packages/interaction/main.js'></script>
+		<script src='fullcalendar/packages/timegrid/main.js'></script>
+		<script src='fullcalendar/packages/bootstrap/main.js'></script>
+
+		<script src='fullcalendar/packages/list/main.js'></script>
+
+		<!--end of calendar api -->
 
 	</head>
 
@@ -44,7 +65,7 @@
 			<section>
 
 				<!-- Woodie, Justin. How to Create A Smooth HTML Calendar With CSS. http://blog.justinwoodie.com/2013/08/smooth-html-calendar-styled-with-css.html -->
-				<table align="center" id="fancytable1">
+				<!--				<table align="center" id="fancytable1">
 
 					<tr>
 						<th colspan="4"><i class="fas fa-user"></i></th>
@@ -117,8 +138,12 @@
 						</td>
 					</tr>
 
-				</table>
+				</table> -->
+
+				<div id='calendar'></div>
 			</section>
+
+
 			<!--Navigation Bar-->
 			<nav class="navbar-fixed-bottom bottomNav">
 				<hr>

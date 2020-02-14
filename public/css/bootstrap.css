@@ -4379,7 +4379,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-collapse {
-  max-height: 340px;
+  max-height: 300px;
   padding-right: 15px;
   padding-left: 15px;
   overflow-x: visible;
@@ -4528,7 +4528,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   margin-top: 4px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   .navbar-toggle {
     display: none;
   }

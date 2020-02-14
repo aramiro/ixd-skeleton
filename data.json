@@ -1,0 +1,26 @@
+{
+	"users": [
+		{
+			"username": "stacykim",
+			"firstname": "Stacy",
+			"lastname": "Kim",
+			"email": "spk004@ucsd.edu",
+			"id": "0001"
+		},
+		{
+			"username": "alyssaramiro",
+			"firstname": "Alyssa",
+			"lastname": "Ramiro",
+			"email": "aramiro@ucsd.edu",
+			"id": "0002"
+		},
+		{
+			"username": "apurwashulka",
+			"firstname": "Apurwa",
+			"lastname": "Shulka",
+			"email": "aashukla@ucsd.edu",
+			"id": "0003"
+		},
+
+	]
+}

@@ -2,24 +2,37 @@
   "name": "IntroHCI",
   "version": "0.0.1",
   "author": "Intro HCI Staff",
-
   "repository": {
     "type": "git",
     "url": "https://github.com/IntroHCI/lab4"
   },
   "license": "MIT",
-
   "private": true,
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "3.x",
-    "express3-handlebars": "*",
-    "mongodb": "*",
-    "mongoose": "*"
+    "@fullcalendar/bootstrap": "^4.3.0",
+    "@fullcalendar/core": "^4.3.1",
+    "@fullcalendar/daygrid": "^4.3.0",
+    "@fullcalendar/list": "^4.3.0",
+    "@fullcalendar/timegrid": "^4.3.0",
+    "@fullcalendar/timeline": "^4.3.0",
+    "compression": "^1.7.4",
+    "connect-timeout": "^1.9.0",
+    "express": "^4.17.1",
+    "express3-handlebars": "^0.5.2",
+    "json": "^9.0.6",
+    "minimatch": "^3.0.4",
+    "mongodb": "^3.5.2",
+    "mongoose": "^5.8.11",
+    "pg": "^7.18.1",
+    "serve-favicon": "^2.5.0",
+    "session": "^0.1.0",
+    "static": "^2.0.0",
+    "vhost": "^3.0.2"
   },
   "engines": {
     "node": "8.9.x"
-  }  
+  }
 }
