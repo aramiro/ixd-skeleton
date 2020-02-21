@@ -13,8 +13,8 @@ s=a.createElement('script');s.async=1;s.src="https://cdn.talkjs.com/talk.js";a.h
 Talk.ready.then(function() {
     var me = new Talk.User({
         id: "123456",
-        name: "Alice",
-        email: "alice@example.com",
+        name: "Stacy Kim",
+        email: "",
         photoUrl: "https://demo.talkjs.com/img/alice.jpg",
         welcomeMessage: "Hey there! How are you? :-)"
     });

@@ -6,7 +6,8 @@
 			"lastname": "Kim",
 			"email": "spk004@ucsd.edu",
 			"id": "0001",
-			"houseID": "first"
+			"houseID": "first",
+			"password": "12345"
 		},
 		{
 			"username": "alyssaramiro",
@@ -14,7 +15,8 @@
 			"lastname": "Ramiro",
 			"email": "aramiro@ucsd.edu",
 			"id": "0002",
-			"houseID": "first"
+			"houseID": "first",
+			"password": "23451"
 		},
 		{
 			"username": "apurwashulka",
@@ -22,7 +24,18 @@
 			"lastname": "Shulka",
 			"email": "aashukla@ucsd.edu",
 			"id": "0003",
-			"houseID": "first"
+			"houseID": "first",
+			"password": "34512"
+		},
+
+		{
+			"username": "user",
+			"firstname": "first",
+			"lastname": "last",
+			"email": "user@ucsd.edu",
+			"id": "0004",
+			"houseID": "first",
+			"password": "45123"
 		}
 	]
 }
