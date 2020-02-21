@@ -30,8 +30,8 @@
 		<script src="js/schedules.js"></script>
 		<link href='fullcalendar/packages/core/main.css' rel='stylesheet' />
 		<link href='fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
-		<link href='fullcalendar/interaction/main.css' rel='stylesheet' 
-		<link href='fullcalendar/packages/timegrid/main.css' rel='stylesheet' />
+		<link href='fullcalendar/interaction/main.css' rel='stylesheet' <link
+			href='fullcalendar/packages/timegrid/main.css' rel='stylesheet' />
 		<link href='fullcalendar/packages/list/main.css' rel='stylesheet' />
 		<link href='fullcalendar/packages/bootstrap/main.css' rel='stylesheet' />
 
@@ -63,86 +63,36 @@
 				</div>
 			</header>
 			<section>
-
-				<!-- Woodie, Justin. How to Create A Smooth HTML Calendar With CSS. http://blog.justinwoodie.com/2013/08/smooth-html-calendar-styled-with-css.html -->
-				<!--				<table align="center" id="fancytable1">
-
-					<tr>
-						<th colspan="4"><i class="fas fa-user"></i></th>
-						<th colspan="4"><i class="fas fa-users"></i></th>
-					</tr>
-
-					<tr class="alt1">
-						<td>Su</td>
-						<td>Mo</td>
-						<td>Tu</td>
-						<td>We</td>
-						<td>Th</td>
-						<td>Fr</td>
-						<td>Sa</td>
-					</tr>
-
-					<tr>
-						<td height="35">1</td>
-						<td>2</td>
-						<td>3</td>
-						<td>4</td>
-						<td>5</td>
-						<td>6</td>
-						<td>7</td>
-					</tr>
-
-					<tr>
-						<td height="35">8</td>
-						<td>9</td>
-						<td>10</td>
-						<td>11</td>
-						<td>12</td>
-						<td>13</td>
-						<td>14</td>
-					</tr>
-
-					<tr>
-						<td height="35">15</td>
-						<td>16</td>
-						<td>17</td>
-						<td>18</td>
-						<td>19</td>
-						<td>20</td>
-						<td>21</td>
-					</tr>
-
-					<tr>
-						<td height="35">22</td>
-						<td>23</td>
-						<td>24</td>
-						<td>25</td>
-						<td>26</td>
-						<td>27</td>
-						<td>28</td>
-					</tr>
-
-					<tr>
-						<td height="35">29</td>
-						<td>30</td>
-						<td>31</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr class=alt2>
-						<td colspan="7">
-							<center></center>
-						</td>
-					</tr>
-
-				</table> -->
-
 				<div id='calendar'></div>
-			</section>
 
+				<div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 text-center form modal" id="popup">
+					<span onclick="document.getElementById('popup').style.display='none'" class="close"
+						title="Close Modal">&times;</span>
+					<h1>Add Event</h1>
+					<!-- modal content -->
+					<form target="/index" class="model-content animate">
+
+						<div class="popupform">
+
+							<div class="form-group">
+								<input type="text" placeholder="Add description" name="description" class="form-control"
+									id="description">
+							</div>
+
+							<div class="form-group">
+								<input type="time" name="start" class="form-control" id="starttime" required>
+							</div>
+
+							<div class="form-group">
+								<input type="time" name="end" class="form-control" id="endtime" required>
+							</div>
+
+							<button class="btn btn-primary btn-lg" type="submit">Save</button>
+
+						</div>
+					</form>
+				</div>
+			</section>
 
 			<!--Navigation Bar-->
 			<nav class="navbar-fixed-bottom bottomNav">
@@ -185,7 +135,20 @@
 				</div>
 			</nav>
 			<!-- end of Navigation Bar -->
+
 		</div>
+		<script>
+			// Get the modal
+			var modal = document.getElementById('popup');
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function (event) {
+				if (event.target == popup) {
+					modal.style.display = "none";
+				}
+			}
+		</script>
+
 	</body>
 
 </html>
