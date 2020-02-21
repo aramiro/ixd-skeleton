@@ -4,13 +4,13 @@
   }
 
   /* Remove margins and padding from the list */
-ul {
+div#list ul {
 	margin: 0;
 	padding: 0;
   }
 
   /* Style the list items */
-ul li {
+div#list ul li {
 	cursor: pointer;
 	position: relative;
 	padding: 12px 8px 12px 40px;
@@ -26,12 +26,12 @@ ul li {
   }
 
   /* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
+div#list ul li:nth-child(odd) {
 	background: white;
   }
 
   /* Darker background-color on hover */
-ul li:hover {
+div#list ul li:hover {
 	background: darkgrey;
   }
 
