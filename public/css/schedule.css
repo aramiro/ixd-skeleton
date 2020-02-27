@@ -131,7 +131,13 @@ span.psw .footer {
 #title button {
   width: 20%;
 }
-
 #groupCalendar {
-  display: none
+  display: none;
+}
+
+
+
+#calendar, #calendar2 {
+  max-width: 900px;
+  margin: 20px auto;
 }

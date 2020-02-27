@@ -51,22 +51,22 @@
 		<div class="container">
 			<header>
 				<div id="title toggle">
-					<div>
-						<button><i class="fas fa-user individual"></i></button>
-						<button><i class="fas fa-users group"></i></button>
-						<div id="user">
-							<a href="/settings" data-target="/settings"><i class="far fa-user-circle fa-4x"></i></a>
-						</div>
+					<span> <button><i class="fas fa-user individual"></i></button></span>
+					<span> <button><i class="fas fa-users group"></i></button></span>
+
+					<div id="user">
+						<a href="/settings" data-target="/settings"><i class="far fa-user-circle fa-4x"></i></a>
 					</div>
 				</div>
 			</header>
-			<section id="individualCalendar">
-				<div id='calendar2'></div>
-
-			</section>
-			<section id="groupCalendar">
+			<div id="individualCalendar">
 				<div id='calendar'></div>
-			</section>
+			</div>
+
+			<div id="groupCalendar">
+				<div id='calendar2'></div>
+			</div>
+
 			<!--Navigation Bar-->
 			<nav class="navbar-fixed-bottom bottomNav">
 				<hr>
@@ -109,14 +109,14 @@
 			</nav>
 			<!-- end of Navigation Bar -->
 
-			<div id="nudgeModal" class="modal">
+			<div id="nudgeModal" class="modal" style="text-align: center;">
 				<div class="modal-content">
 					<div class="modal-header">
 						<span class="close">&times;</span>
 						<h2>Nudge person?</h2>
 					</div>
 					<div class="modal-body">
-						<button>Nudge</button>
+						<button id="nudge">Nudge</button>
 						<button id="close">Cancel</button>
 					</div>
 					<div class="modal-footer">
@@ -167,7 +167,7 @@
 		</script>
 		<script>
 			$(function () {
-				$("#toggle > div > button").click(function () {
+				$("#toggle > span").click(function () {
 					var ix = $(this).index();
 					$("#individualCalendar").toggle(ix === 0);
 					$("#groupCalendar").toggle(ix === 1);

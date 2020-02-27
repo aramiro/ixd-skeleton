@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var calendarEl = document.getElementById("calendar");
-  var calendarE2 = document.getElementById("calendar2");
+  var indCalendarEl = document.getElementById("calendar");
+  var groupCalendarE1 = document.getElementById("calendar2");
 
-  var calendar = new FullCalendar.Calendar(calendarEl, {
+  var icalendar = new FullCalendar.Calendar(indCalendarEl, {
     plugins: [
       "interaction",
       "dayGrid",
@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
       "bootstrap",
       "googleCalendar"
     ],
-    editable: true,
+	editable: true,
+	droppable: true,
     googleCalendarApiKey: "AIzaSyD_OFNIKMzCwC7ZotObECp4sUNZ7hH-iv0",
     defaultView: "dayGridMonth",
     defaultDate: "2020-02-07",
@@ -32,12 +33,40 @@ document.addEventListener("DOMContentLoaded", function() {
       info.dayEl.style.backgroundColor = "red";
 
       $("#popup").css("display", "block");
-    }
+    },
+    eventClick: function(info) {
+		info.jsEvent.preventDefault(); // don't let the browser navigate
+  
+		var modal = document.getElementById("nudgeModal");
+		var span = document.getElementsByClassName("close")[0];
+		var cancel = document.getElementById("close");
+		var nudge = document.getElementById("nudge");
 
+		modal.style.display = "block";
+  
+		span.onclick = function() {
+		  modal.style.display = "none";
+		};
+		cancel.onclick = function(){
+			modal.style.display = "none";
+		}
 
+		nudge.onclick = function() {
+			alert("nudge sent");
+			modal.style.display = "none"
+		}
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+			modal.style.display = "none";
+		  }
+		};
+		// change the border color just for fun
+		info.el.style.borderColor = "red";
+	  }
   });
 
-  var gcalendar = new FullCalendar.Calendar(calendarE2, {
+  var gcalendar = new FullCalendar.Calendar(groupCalendarE1, {
     plugins: [
       "interaction",
       "dayGrid",
@@ -46,7 +75,8 @@ document.addEventListener("DOMContentLoaded", function() {
       "bootstrap",
       "googleCalendar"
     ],
-    editable: true,
+	editable: true,
+	droppable: true,
     googleCalendarApiKey: "AIzaSyD_OFNIKMzCwC7ZotObECp4sUNZ7hH-iv0",
     defaultView: "dayGridMonth",
     defaultDate: "2020-02-07",
@@ -74,13 +104,19 @@ document.addEventListener("DOMContentLoaded", function() {
 		var modal = document.getElementById("nudgeModal");
 		var span = document.getElementsByClassName("close")[0];
 		var cancel = document.getElementById("close");
+		var nudge = document.getElementById("nudge");
 		modal.style.display = "block";
-  
+
 		span.onclick = function() {
 		  modal.style.display = "none";
 		};
 		cancel.onclick = function(){
 			modal.style.display = "none";
+		}
+
+		nudge.onclick = function() {
+			alert("nudge sent");
+			modal.style.display = "none"
 		}
 		// When the user clicks anywhere outside of the modal, close it
 		window.onclick = function(event) {
@@ -93,6 +129,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	  }
   });
 
-  calendar.render();
+  icalendar.render();
   gcalendar.render();
 });
