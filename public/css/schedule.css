@@ -27,7 +27,7 @@ input[type="password"] {
 
 /* Set a style for all buttons */
 button {
-  background-color: lightblue;
+  background-color: black;
   color: white;
   padding: 14px 20px;
   margin: 2px auto;
@@ -78,6 +78,8 @@ span.psw .footer {
   display: none; /* hidden by default */
   position: fixed; /* stay in place */
   z-index: 1; /* sit on top */
+  left: 0;
+  top: 0;
   overflow: auto;
   width: 100%;
   height: 100%;
@@ -85,9 +87,11 @@ span.psw .footer {
 }
 
 .modal-content { 
-  margin: 5px auto;
+  margin: 15px auto;
+  padding: 20px;
+  border: 1px solid lightgray;
   width: 50%;
-  background-color: #E5E5E5; opacity: .06;
+  background-color: #E5E5E5;
 }
 
 .close {
@@ -95,7 +99,7 @@ span.psw .footer {
   right: 25px;
   top: 0;
   color: #000;
-  font-size: 35px;
+  font-size: 28px;
   font-weight: bold;
 }
 
@@ -126,4 +130,8 @@ span.psw .footer {
 
 #title button {
   width: 20%;
+}
+
+#groupCalendar {
+  display: none
 }

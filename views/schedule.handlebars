@@ -61,39 +61,11 @@
 				</div>
 			</header>
 			<section id="individualCalendar">
-				<div id='calendar'></div>
+				<div id='calendar2'></div>
 
-				<div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 text-center form modal" id="popup">
-					<span onclick="document.getElementById('popup').style.display='none'" class="close"
-						title="Close Modal">&times;</span>
-					<h1>Add Event</h1>
-					<!-- modal content -->
-					<form target="/index" class="model-content animate">
-
-						<div class="popupform">
-
-							<div class="form-group">
-								<input type="text" placeholder="Add description" name="description" class="form-control"
-									id="description">
-							</div>
-
-							<div class="form-group">
-								<input type="time" name="start" class="form-control" id="starttime" required>
-							</div>
-
-							<div class="form-group">
-								<input type="time" name="end" class="form-control" id="endtime" required>
-							</div>
-
-							<button class="btn btn-primary btn-lg" type="submit">Save</button>
-
-						</div>
-					</form>
-				</div>
 			</section>
 			<section id="groupCalendar">
-				<div id='calendar'>
-				</div>
+				<div id='calendar'></div>
 			</section>
 			<!--Navigation Bar-->
 			<nav class="navbar-fixed-bottom bottomNav">
@@ -137,6 +109,50 @@
 			</nav>
 			<!-- end of Navigation Bar -->
 
+			<div id="nudgeModal" class="modal">
+				<div class="modal-content">
+					<div class="modal-header">
+						<span class="close">&times;</span>
+						<h2>Nudge person?</h2>
+					</div>
+					<div class="modal-body">
+						<button>Nudge</button>
+						<button id="close">Cancel</button>
+					</div>
+					<div class="modal-footer">
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="form modal" id="popup" style="text-align: center;">
+			<span onclick="document.getElementById('popup').style.display='none'" class="close"
+				title="Close Modal">&times;</span>
+			<h1>Add Event</h1>
+			<!-- modal content -->
+			<form target="/index" class="model-content animate">
+
+				<div class="popupform">
+
+					<div class="form-group">
+						<input type="text" placeholder="Add description" name="description" class="form-control"
+							id="description">
+					</div>
+
+					<div class="form-group">
+						<input type="time" name="start" class="form-control" id="starttime" required>
+					</div>
+
+					<div class="form-group">
+						<input type="time" name="end" class="form-control" id="endtime" required>
+					</div>
+
+					<button class="btn btn-primary btn-lg" type="submit">Save</button>
+
+				</div>
+			</form>
 		</div>
 		<script>
 			// Get the modal
@@ -148,6 +164,15 @@
 					modal.style.display = "none";
 				}
 			}
+		</script>
+		<script>
+			$(function () {
+				$("#toggle > div > button").click(function () {
+					var ix = $(this).index();
+					$("#individualCalendar").toggle(ix === 0);
+					$("#groupCalendar").toggle(ix === 1);
+				});
+			});
 		</script>
 
 	</body>
