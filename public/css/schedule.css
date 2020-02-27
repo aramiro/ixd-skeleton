@@ -139,5 +139,6 @@ span.psw .footer {
 
 #calendar, #calendar2 {
   max-width: 900px;
+  max-height: 800px;
   margin: 20px auto;
 }

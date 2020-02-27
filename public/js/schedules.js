@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     ],
 	editable: true,
 	droppable: true,
+	contentHeight: 500,
     googleCalendarApiKey: "AIzaSyD_OFNIKMzCwC7ZotObECp4sUNZ7hH-iv0",
     defaultView: "dayGridMonth",
     defaultDate: "2020-02-07",
