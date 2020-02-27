@@ -65,3 +65,7 @@ ul.nav li {
 header {
   margin: 20px auto;
 }
+
+html, body {
+  height:100%;
+}
