@@ -93,7 +93,14 @@
 
 			<!-- end of navigation bar -->
 		</div>
+		<script>
+			document.getElementById("userInput").addEventListener("keydown", function (event) {
 
+				if (event.code == "Enter") {
+					newElement();
+				}
+			});
+		</script>
 	</body>
 
 </html>
