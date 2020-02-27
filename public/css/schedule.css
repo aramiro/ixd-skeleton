@@ -10,115 +10,6 @@ a:visited {color:#000000;} /*visited link*/
 a:hover {color: silver;} /*mouse over link*/
 a:active {color:silver;} /*selected link*/
 
-#fancytable1 { /*Main table layout for calendar*/
-
-border-top-left-radius:15px 15px; /*Top left rounded corner of calendar*/
--moz-border-radius-topleft:15px 15px; /*Top left rounded corner of calendar*/
-border-radius-topleft:15px 15px; /*Top left rounded corner of calendar*/
-border-top-right-radius:15px 15px; /*Top right rounded corner of calendar*/
--moz-border-radius-topright:15px 15px; /*Top right rounded corner of calendar*/
-border-radius-topright:15px 15px; /*Top right rounded corner of calendar*/
-
-font-family: Arial, Helvetica, sans-serif; /*Font style for calendar*/
-color: #222222; /*Days of week text color*/
-border-collapse:collapse; /*Removes border padding between calendar days*/
-width:500px; /*Calendar Width*/
-
-}
-
-#fancytable1 th { /*Main calendar month title*/
-
-padding:5px; /*Month title padding*/
-border-top-left-radius:15px 15px; /*Rounded top left corner*/
--moz-border-radius-topleft:15px 15px; /*Rounded top left corner*/
-border-radius-topleft:15px 15px; /*Rounded top left corner*/
-border-top-right-radius:15px 15px; /*Rounded top right corner*/
--moz-border-radius-topright:15px 15px; /*Rounded top right corner*/
-border-radius-topright:15px 15px; /*Rounded top right corner*/
-
-font-size: 1.3em; /*Month title font size*/
-text-align: center; /*Centers month title*/
-
-background: -moz-linear-gradient(bottom, snow, #E5E5E5); /*Background gradient of Month title*/
-background: -webkit-linear-gradient(top, snow, #E5E5E5); /*Background gradient of Month title*/
-background: -o-linear-gradient(top, snow,#E5E5E5); /*Background gradient of Month title*/
-background: linear-gradient(top, snow, #E5E5E5); /*Background gradient of Month title*/
-
-color: black; /*Month title color*/
-text-shadow: 2px 2px 2px #E5E5E5; /*Month title text shadow*/
-
-}
-
-#fancytable1 tr.alt1 td { /*Days of week Sunday through Saturday*/
-
-padding:5px; /*Days of week cell padding*/
-
-font-size: 1.5em; /*Days of week font size*/
-text-align: center; /*Days of week text alignment*/
-
-background: -moz-linear-gradient(bottom, white, #E5E5E5); /*Background gradient for Days of week*/
-background: -webkit-linear-gradient(top, white, #E5E5E5); /*Background gradient for Days of week*/
-background: -o-linear-gradient(top, white,#E5E5E5); /*Background gradient for Days of week*/
-background: linear-gradient(top, white, #E5E5E5); /*Background gradient for Days of week*/
-
-color: black; /*Days of week text color*/
-text-shadow: 2px 2px 2px grey; /*Days of week text shadow*/
-
-}
-
-#fancytable1 tr.alt2 td { /*Bottom bar with url*/
-
-padding:5px; /*Bottom bar with url cell padding*/
-
-border-bottom-left-radius:15px 15px; /*Bottom bar with url left rounded corner*/
--moz-border-radius-bottomleft:15px 15px; /*Bottom bar with url left rounded corner*/
-border-radius-bottomleft:15px 15px; /*Bottom bar with url left rounded corner*/
-border-bottom-right-radius:15px 15px; /*Bottom bar with url right rounded corner*/
--moz-border-radius-bottomright:15px 15px; /*Bottom bar with url right rounded corner*/
-border-radius-bottomright:15px 15px; /*Bottom bar with url right rounded corner*/
-
-font-size: .75em; /*Bottom bar with url font size*/
-text-align: center; /*Bottom bar with url text alignment*/
-
-background: -moz-linear-gradient(bottom, white, #E5E5E5); /*Background gradient bottom bar with url*/
-background: -webkit-linear-gradient(top, white, #E5E5E5); /*Background gradient bottom bar with url*/
-background: -o-linear-gradient(top, white,#E5E5E5); /*Background gradient bottom bar with url*/
-background: linear-gradient(top, white, #E5E5E5); /*Background gradient bottom bar with url*/
-
-color: #E5E5E5; /*Bottom bar with url text color*/
-text-shadow: 2px 2px 2px #222222; /*Bottom bar with url text shadow*/
-
-}
-
-#fancytable1 td { /*Day numbers 1 through 31*/
-
-padding:5px; /*Day numbers cell padding*/
-background-color: snow; /*Day numbers background color*/
-font-size: 1em; /*Day numbers font size*/
-text-align: center; /*Day numbers text alignment*/
-
-}
-
-#fancytable1 tr.alt td { /*Calendar day numbers area*/
-
-background-color: cccccc; /*Calendar day numbers area background color*/
-
-}
-
-#fancytable1 tr:hover td { /*Hover row bar over day numbers 1 through 31*/
-
-background: -moz-linear-gradient(bottom, snow, #E5E5E5) !important; /*Hover row bar background color*/
-background: -webkit-linear-gradient(top, snow, #E5E5E5); /*Hover row bar background color*/
-background: -o-linear-gradient(top, snow, #E5E5E5); /*Hover row bar background color*/
-background: linear-gradient(top, snow, #E5E5E5); /*Hover row bar background color*/
-color: grey; /*Hover row bar text color*/
-text-shadow: 2px 2px 2px #E5E5E5; /*Hover row bar text shadow*/
-
-}
-
-
-
-
 
 form {
 	border: 3px solid #f1f1f1;
@@ -139,10 +30,10 @@ button {
   background-color: lightblue;
   color: white;
   padding: 14px 20px;
-  margin: 8px auto;
+  margin: 2px auto;
   border: none;
   cursor: pointer;
-  width: 50%;
+ 
 }
 
 /* Add a hover effect for buttons */
@@ -227,4 +118,12 @@ span.psw .footer {
 @keyframes animatezoom {
   from {transform: scale(0)}
   to {transform: scale(1)}
+}
+
+#title{
+  display: flexbox;
+}
+
+#title button {
+  width: 20%;
 }

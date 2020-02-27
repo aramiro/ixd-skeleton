@@ -30,8 +30,7 @@
 		<script src="js/schedules.js"></script>
 		<link href='fullcalendar/packages/core/main.css' rel='stylesheet' />
 		<link href='fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
-		<link href='fullcalendar/interaction/main.css' rel='stylesheet' <link
-			href='fullcalendar/packages/timegrid/main.css' rel='stylesheet' />
+		<link href='fullcalendar/packages/timegrid/main.css' rel='stylesheet' />
 		<link href='fullcalendar/packages/list/main.css' rel='stylesheet' />
 		<link href='fullcalendar/packages/bootstrap/main.css' rel='stylesheet' />
 
@@ -43,7 +42,7 @@
 		<script src='fullcalendar/packages/bootstrap/main.js'></script>
 
 		<script src='fullcalendar/packages/list/main.js'></script>
-
+		<script src='fullcalendar/packages/google-calendar/main.js'></script>
 		<!--end of calendar api -->
 
 	</head>
@@ -51,18 +50,17 @@
 	<body style="background-color: #E5E5E5;">
 		<div class="container">
 			<header>
-				<div>
-					<div id="title">
-						<h1>
-							<script> document.write(new Date().toLocaleDateString('default', { month: 'long', year: 'numeric' })); </script>
-						</h1>
-					</div>
-					<div id="user">
-						<a href="/settings" data-target="/settings"><i class="far fa-user-circle fa-4x"></i></a>
+				<div id="title toggle">
+					<div>
+						<button><i class="fas fa-user individual"></i></button>
+						<button><i class="fas fa-users group"></i></button>
+						<div id="user">
+							<a href="/settings" data-target="/settings"><i class="far fa-user-circle fa-4x"></i></a>
+						</div>
 					</div>
 				</div>
 			</header>
-			<section>
+			<section id="individualCalendar">
 				<div id='calendar'></div>
 
 				<div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 text-center form modal" id="popup">
@@ -93,7 +91,10 @@
 					</form>
 				</div>
 			</section>
-
+			<section id="groupCalendar">
+				<div id='calendar'>
+				</div>
+			</section>
 			<!--Navigation Bar-->
 			<nav class="navbar-fixed-bottom bottomNav">
 				<hr>

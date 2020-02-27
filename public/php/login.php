@@ -1,19 +1,25 @@
-<?php
-/*
-// define variables and set to empty values
-$nameErr = $emailErr = $genderErr = $WebsiteErr = "";
-$name = $email = $password = ""
+<? php
 
-$email = $_POST['email'];
-$pass = $_POST['password'];
+		session_start();
+		$_SESSION["loggedInUser"] = $username;
+			try {
+				// open connection to mongodb server
+				$conn = new Mongo('localhost:27017')
+			}
 
-//do your validation here 
-if( validation ok ) { echo '{"validation_result": "passed"}'; }
-else{ echo '{"registration" : "falied"}'; }
+			$db = $conn->reminder;
+			// access collection
+			$collection = $db->items;
+			$username = $_POST['username'];
+			$password = $_POST['password'];
+			$user = $db->$collection->findOne(array('username'=> $username, 'password'=> $password));
 
-*/
+			foreach ($user as $obj) {
+				echo 'Username' . $obj['username'];
+				echo 'password: ' . $obj['password'];
+				if($username == )
+			}
 
-header("Location: /index");
+			$conn->close();
+
 ?>
-
-
