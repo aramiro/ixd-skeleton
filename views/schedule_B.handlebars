@@ -22,7 +22,7 @@
 		<link href="css/bootstrap-theme.css" rel="stylesheet">
 		<link href="css/index.css" rel="stylesheet">
 		<link href="css/nav_B.css" rel="stylesheet">
-		<link href="css/schedule.css" rel="stylesheet">
+		<link href="css/schedule_B.css" rel="stylesheet">
 
 		<!--<link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
 
@@ -73,49 +73,50 @@
 			</div>
 
 			<!--Navigation Bar-->
-		<nav class="mobile-bottom-nav">
-			<div class="mobile-bottom-nav__item ">
-				<div class="mobile-bottom-nav__item-content">
-					<i class="fas fa-home"></i><br>					Home
+			<nav class="mobile-bottom-nav">
+				<div class="mobile-bottom-nav__item ">
+					<div class="mobile-bottom-nav__item-content">
+						<i class="fas fa-home"></i><br>Home
+					</div>
 				</div>
-			</div>
-			<div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
-				<div class="mobile-bottom-nav__item-content">
-					<i class="far fa-calendar-alt"></i><br>					Schedule
+				<div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+					<div class="mobile-bottom-nav__item-content">
+						<i class="far fa-calendar-alt"></i><br>Schedule
+					</div>
 				</div>
-			</div>
-			<div class="mobile-bottom-nav__item">
-				<div class="mobile-bottom-nav__item-content">
-					<i class="fas fa-envelope"></i><br>					Messages
+				<div class="mobile-bottom-nav__item">
+					<div class="mobile-bottom-nav__item-content">
+						<i class="fas fa-envelope"></i><br>Messages
+					</div>
 				</div>
-			</div>
 
-			<div class="mobile-bottom-nav__item">
-				<div class="mobile-bottom-nav__item-content">
-					<i class="fas fa-utensils"></i><br>					Fridge
+				<div class="mobile-bottom-nav__item">
+					<div class="mobile-bottom-nav__item-content">
+						<i class="fas fa-utensils"></i><br>Fridge
+					</div>
 				</div>
-			</div>
-		</nav>
+			</nav>
 
 			<!-- end of Navigation Bar -->
+		</div>
 
-			<div id="nudgeModal" class="modal" style="text-align: center;">
-				<div class="modal-content">
-					<span onclick="document.getElementById('nudgeModal').style.display='none'"
-						class="close">&times;</span>
-					<div class="modal-header">
-						<h2 id="nudge-title">Nudge person?</h2>
-					</div>
-					<div class="modal-body">
-						<button id="nudge">Nudge</button>
-						<button id="closebtn">Cancel</button>
-					</div>
-					<div class="modal-footer">
+		<!-- Modals -->
+		<div id="nudgeModal" class="modal" style="text-align: center;">
+			<div class="modal-content">
+				<span onclick="document.getElementById('nudgeModal').style.display='none'" class="close">&times;</span>
+				<div class="modal-header">
+					<h2 id="nudge-title">Nudge person?</h2>
+				</div>
+				<div class="modal-body">
+					<button id="nudge">Nudge</button>
+					<button id="closebtn">Cancel</button>
+				</div>
+				<div class="modal-footer">
 
-					</div>
 				</div>
 			</div>
 		</div>
+
 
 		<div id="nudgeModalafter" class="modal" style="text-align: center;">
 			<div class="modal-content">
@@ -133,35 +134,36 @@
 				</div>
 			</div>
 		</div>
-		</div>
-
 
 		<div class="form modal" id="popup" style="text-align: center;">
-			<span onclick="document.getElementById('popup').style.display='none'" class="close"
-				title="Close Modal">&times;</span>
-			<h1>Add Event</h1>
 			<!-- modal content -->
-			<form target="/schedule" class="model-content animate">
+			<div class="modal-content animate">
+				<span onclick="document.getElementById('popup').style.display='none'" class="close"
+					title="Close Modal">&times;</span>
+				<h1>Add Event</h1>
+				<form target="/schedule">
 
-				<div class="popupform">
+					<div class="popupform">
 
-					<div class="form-group">
-						<input type="text" placeholder="Add description" name="description" class="form-control"
-							id="description">
+						<div class="form-group">
+							<input type="text" placeholder="Add description" name="description" class="form-control"
+								id="description">
+						</div>
+
+						<div class="form-group">
+							<input type="time" name="start" class="form-control" id="starttime" required>
+						</div>
+
+						<div class="form-group">
+							<input type="time" name="end" class="form-control" id="endtime" required>
+						</div>
+
+						<button class="btn btn-primary btn-lg" type="submit">Save</button>
+
 					</div>
+				</form>
+			</div>
 
-					<div class="form-group">
-						<input type="time" name="start" class="form-control" id="starttime" required>
-					</div>
-
-					<div class="form-group">
-						<input type="time" name="end" class="form-control" id="endtime" required>
-					</div>
-
-					<button class="btn btn-primary btn-lg" type="submit">Save</button>
-
-				</div>
-			</form>
 		</div>
 		<script>
 			// Get the modal
