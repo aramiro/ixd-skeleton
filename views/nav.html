@@ -1,4 +1,157 @@
-<!--Navigation Bar -->
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Icons">
+		<meta name="keywords" content="Icons">
+		<meta name="author" content="Alyssa Ramiro, Stacy Kim, Apurwa Shulka">
+
+		<!--Javascript files-->
+		<!--<script src="/js/jquery-1.11.0.js"></script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		<!--<script src="/js/bootstrap.js"></script>-->
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="https://kit.fontawesome.com/425ceb4c07.js" crossorigin="anonymous"></script>
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap-theme.css" rel="stylesheet">
+		<link href="css/index.css" rel="stylesheet">
+
+		<!--<link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
+		<style>
+			body {
+				/*dev
+	//height:2000px; */
+				padding: 10px;
+				padding-bottom: 50px;
+			}
+
+			h1 {
+				margin-bottom: 2000px;
+			}
+
+			.mobile-bottom-nav {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 1000;
+
+				/*give nav it's own compsite layer */
+				will-change: transform;
+				transform: translateZ(0);
+
+				display: flex;
+
+				height: 50px;
+
+				box-shadow: 0 -2px 5px -2px #333;
+				background-color: #fff;
+			}
+
+			.mobile-bottom-nav__item {
+				flex-grow: 1;
+				text-align: center;
+				font-size: 12px;
+
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			.mobile-bottom-nav__item--active {
+				/*/dev */
+				color: red;
+			}
+
+			.mobile-bottom-nav__item-content {
+				display: flex;
+				flex-direction: column;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--
+		<nav class="mobile-bottom-nav">
+			<div class="mobile-bottom-nav item mobile-bottom-nav item--active">
+				<div class="mobile-bottom-nav item-content">
+					<a href="/index" data-toggle="collapse" data-target="/index">
+						<i class="fas fa-home"></i><br>Home
+					</a>
+				</div>
+			</div>
+			<div class="mobile-bottom-nav item">
+				<div class="mobile-bottom-nav item-content">
+					<a href="/schedule" data-toggle="collapse" data-target="/schedule">
+						<i class="far fa-calendar-alt"></i><br>Schedule
+					</a>
+				</div>
+				<div class="mobile-bottom-nav item">
+					<div class="mobile-bottom-nav item-content">
+						<a href="/messages" data-toggle="collapse" data-target="/messages">
+							<i class="fas fa-envelope"></i><br>Messages
+						</a>
+					</div>
+				</div>
+		
+				<div class="mobile-bottom-nav item">
+					<div class="mobile-bottom-nav item-content">
+						<a href="/food" data-toggle="collapse" data-target="/fridge"><i class="fas fa-utensils"></i><br>Fridge
+						</a>
+					</div>
+				</div>
+		</nav>
+	-->
+
+		<h1>Mobile Fixed Bottom Nav</h1>
+		<h2>Bottom</h2>
+
+		<nav class="mobile-bottom-nav">
+			<div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+				<div class="mobile-bottom-nav__item-content">
+					<i class="fas fa-home"></i><br>					Home
+				</div>
+			</div>
+			<div class="mobile-bottom-nav__item">
+				<div class="mobile-bottom-nav__item-content">
+					<i class="far fa-calendar-alt"></i><br>					Schedule
+				</div>
+			</div>
+			<div class="mobile-bottom-nav__item">
+				<div class="mobile-bottom-nav__item-content">
+					<i class="fas fa-envelope"></i><br>					Messages
+				</div>
+			</div>
+
+			<div class="mobile-bottom-nav__item">
+				<div class="mobile-bottom-nav__item-content">
+					<i class="fas fa-utensils"></i><br>					Fridge
+				</div>
+			</div>
+		</nav>
+		<script>
+			var navItems = document.querySelectorAll(".mobile-bottom-nav__item");
+			navItems.forEach(function (e, i) {
+				e.addEventListener("click", function (e) {
+					navItems.forEach(function (e2, i2) {
+						e2.classList.remove("mobile-bottom-nav__item--active");
+					})
+					this.classList.add("mobile-bottom-nav__item--active");
+				});
+			});
+		</script>
+	</body>
+
+</html>
+
+<!--Navigation Bar 
 <nav class="navbar-fixed-bottom bottomNav">
 	<hr>
 	<div class="navbar-header">
@@ -38,6 +191,4 @@
 	</div>
 </nav>
 
-<!-- end of navigation bar -->
-
-
+ end of navigation bar -->
