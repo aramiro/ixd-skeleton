@@ -116,18 +116,34 @@
 			<div id="nudgeModal" class="modal" style="text-align: center;">
 				<div class="modal-content">
 					<div class="modal-header">
-						<span class="close">&times;</span>
-						<h2>Nudge person?</h2>
+						<span onclick="document.getElementById('nudgeModal').style.display='none'" class="close">&times;</span>
+						<h2 id="nudge-title">Nudge person?</h2>
 					</div>
 					<div class="modal-body">
 						<button id="nudge">Nudge</button>
-						<button id="close">Cancel</button>
+						<button id="closebtn">Cancel</button>
 					</div>
 					<div class="modal-footer">
 
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<div id="nudgeModalafter" class="modal" style="text-align: center;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span onclick="document.getElementById('nudgeModalafter').style.display='none'" class="close">&times;</span>
+					<h2 id="nudge-title-after">Nudge Sent!</h2>
+				</div>
+				<div class="modal-body">
+					<button id="close" onclick="document.getElementById('nudgeModalafter').style.display='none'">close</button>
+				</div>
+				<div class="modal-footer">
+
+				</div>
+			</div>
+		</div>
 		</div>
 
 
@@ -161,11 +177,12 @@
 		<script>
 			// Get the modal
 			var modal = document.getElementById('popup');
-
+			var nudgeafter = document.getElementById('nudgeModalafter');
 			// When the user clicks anywhere outside of the modal, close it
 			window.onclick = function (event) {
-				if (event.target == popup) {
+				if (event.target == popup || event.target == nudgeafter) {
 					modal.style.display = "none";
+					nudgeafter.style.display = "none";
 				}
 			}
 		</script>

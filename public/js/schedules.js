@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	editable: true,
 	droppable: true,
 	contentHeight: 500,
+	themeSystem: 'bootstrap',
     googleCalendarApiKey: "AIzaSyD_OFNIKMzCwC7ZotObECp4sUNZ7hH-iv0",
     defaultView: "dayGridMonth",
     defaultDate: "2020-02-07",
@@ -53,8 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 
 		nudge.onclick = function() {
-			alert("nudge sent");
-			modal.style.display = "none"
+			document.getElementById("nudge-title").innerHTML = "Nudge Sent!";
 		}
 		// When the user clicks anywhere outside of the modal, close it
 		window.onclick = function(event) {
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
 		var modal = document.getElementById("nudgeModal");
 		var span = document.getElementsByClassName("close")[0];
-		var cancel = document.getElementById("close");
+		var cancel = document.getElementById("closebtn");
 		var nudge = document.getElementById("nudge");
 		modal.style.display = "block";
 
@@ -116,8 +116,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 
 		nudge.onclick = function() {
-			alert("nudge sent");
 			modal.style.display = "none"
+			$("#nudgeModalafter").css("display", "block");
+			
 		}
 		// When the user clicks anywhere outside of the modal, close it
 		window.onclick = function(event) {
