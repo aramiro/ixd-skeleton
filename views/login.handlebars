@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -55,7 +52,7 @@
 					title="Close Modal">&times;</span>
 				<h1>Login</h1>
 				<!-- Modal content -->
-				<form action="/index" class="model-content animate">
+				<form action="/php/login.php" class="model-content animate">
 
 					<div class="imgcontainer">
 						<img src="#" alt="Avatar" class="avatar" hidden>
@@ -90,9 +87,15 @@
 			</div>
 
 			<div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 text-center form modal" id="signup">
-				<span onclick="document.getElementById('signup').style.display='none'" class="close"
-					title="Close Modal">&times;</span>
-				<h1>Signup</h1>
+
+				<div>
+					<div>
+						<span onclick="document.getElementById('signup').style.display='none'" class="close"
+							title="Close Modal">&times;</span>
+					</div>
+					<h1>Signup</h1>
+				</div>
+
 				<!-- modal content -->
 				<form action="/index" class="model-content animate">
 
@@ -147,9 +150,8 @@
 
 			// When the user clicks anywhere outside of the modal, close it
 			window.onclick = function (event) {
-				if (event.target == loginmodal || event.target == signupmodal) {
+				if (event.target == loginmodal) {
 					modal.style.display = "none";
-					signupmodal.style.display = "none";
 				}
 			}
 		</script>

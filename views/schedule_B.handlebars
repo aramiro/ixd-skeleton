@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+	<head>
+		<title>Schedule</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta name="description" content="index">
+		<meta name="keywords" content="Schedule, Calendar">
+		<meta name="author" content="Alyssa Ramiro, Stacy Kim, Apurwa Shulka">
+		<!--Javascript files-->
+		<!--<script src="/js/jquery-1.11.0.js"></script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		<!--<script src="/js/bootstrap.js"></script>-->
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="https://kit.fontawesome.com/425ceb4c07.js" crossorigin="anonymous"></script>
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap-theme.css" rel="stylesheet">
+		<link href="css/index.css" rel="stylesheet">
+		<link href="css/nav_B.css" rel="stylesheet">
+		<link href="css/schedule.css" rel="stylesheet">
+
+		<!--<link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
+
+
+		<!-- calendar plugin api -->
+		<script src="js/schedules.js"></script>
+		<link href='fullcalendar/packages/core/main.css' rel='stylesheet' />
+		<link href='fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
+		<link href='fullcalendar/packages/timegrid/main.css' rel='stylesheet' />
+		<link href='fullcalendar/packages/list/main.css' rel='stylesheet' />
+		<link href='fullcalendar/packages/bootstrap/main.css' rel='stylesheet' />
+
+
+		<script src='fullcalendar/packages/core/main.js'></script>
+		<script src='fullcalendar/packages/daygrid/main.js'></script>
+		<script src='fullcalendar/packages/interaction/main.js'></script>
+		<script src='fullcalendar/packages/timegrid/main.js'></script>
+		<script src='fullcalendar/packages/bootstrap/main.js'></script>
+
+		<script src='fullcalendar/packages/list/main.js'></script>
+		<script src='fullcalendar/packages/google-calendar/main.js'></script>
+		<!--end of calendar api -->
+
+	</head>
+
+	<body style="background-color: #E5E5E5;">
+		<div class="container">
+			<header>
+				<div id="title toggle">
+					<span> <button><i class="fas fa-user individual"></i></button></span>
+					<span> <button><i class="fas fa-users group"></i></button></span>
+
+					<div id="user">
+						<a href="/settings" data-target="/settings"><i class="far fa-user-circle fa-4x"></i></a>
+					</div>
+				</div>
+			</header>
+		</div>
+
+		<div class="container" style="height: 90%;">
+
+			<div id="individualCalendar">
+				<div id='calendar2'></div>
+			</div>
+
+			<div id="groupCalendar">
+				<div id='calendar'></div>
+			</div>
+
+			<!--Navigation Bar-->
+			<nav class="mobile-bottom-nav">
+				<div class="mobile-bottom-nav item mobile-bottom-nav item--active">
+					<div class="mobile-bottom-nav item-content">
+						<a href="/index" data-toggle="collapse" data-target="/index">
+							<i class="fas fa-home"></i><br>Home
+						</a>
+					</div>
+				</div>
+				<div class="mobile-bottom-nav item">
+					<div class="mobile-bottom-nav item-content">
+						<a href="/schedule" data-toggle="collapse" data-target="/schedule">
+							<i class="far fa-calendar-alt"></i><br>Schedule
+						</a>
+					</div>
+					<div class="mobile-bottom-nav item">
+						<div class="mobile-bottom-nav item-content">
+							<a href="/messages" data-toggle="collapse" data-target="/messages">
+								<i class="fas fa-envelope"></i><br>Messages
+							</a>
+						</div>
+					</div>
+
+					<div class="mobile-bottom-nav item">
+						<div class="mobile-bottom-nav item-content">
+							<a href="/food" data-toggle="collapse" data-target="/fridge"><i
+									class="fas fa-utensils"></i><br>Fridge
+							</a>
+						</div>
+					</div>
+			</nav>
+
+			<!-- end of Navigation Bar -->
+
+			<div id="nudgeModal" class="modal" style="text-align: center;">
+				<div class="modal-content">
+					<span onclick="document.getElementById('nudgeModal').style.display='none'"
+						class="close">&times;</span>
+					<div class="modal-header">
+						<h2 id="nudge-title">Nudge person?</h2>
+					</div>
+					<div class="modal-body">
+						<button id="nudge">Nudge</button>
+						<button id="closebtn">Cancel</button>
+					</div>
+					<div class="modal-footer">
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="nudgeModalafter" class="modal" style="text-align: center;">
+			<div class="modal-content">
+				<span onclick="document.getElementById('nudgeModalafter').style.display='none'"
+					class="close">&times;</span>
+				<div class="modal-header">
+					<h2 id="nudge-title-after">Nudge Sent!</h2>
+				</div>
+				<div class="modal-body">
+					<button id="close"
+						onclick="document.getElementById('nudgeModalafter').style.display='none'">close</button>
+				</div>
+				<div class="modal-footer">
+
+				</div>
+			</div>
+		</div>
+		</div>
+
+
+		<div class="form modal" id="popup" style="text-align: center;">
+			<span onclick="document.getElementById('popup').style.display='none'" class="close"
+				title="Close Modal">&times;</span>
+			<h1>Add Event</h1>
+			<!-- modal content -->
+			<form target="/schedule" class="model-content animate">
+
+				<div class="popupform">
+
+					<div class="form-group">
+						<input type="text" placeholder="Add description" name="description" class="form-control"
+							id="description">
+					</div>
+
+					<div class="form-group">
+						<input type="time" name="start" class="form-control" id="starttime" required>
+					</div>
+
+					<div class="form-group">
+						<input type="time" name="end" class="form-control" id="endtime" required>
+					</div>
+
+					<button class="btn btn-primary btn-lg" type="submit">Save</button>
+
+				</div>
+			</form>
+		</div>
+		<script>
+			// Get the modal
+			var modal = document.getElementById('popup');
+			var nudgeafter = document.getElementById('nudgeModalafter');
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function (event) {
+				if (event.target == popup || event.target == nudgeafter) {
+					modal.style.display = "none";
+					nudgeafter.style.display = "none";
+				}
+			}
+		</script>
+		<script>
+			$(function () {
+				$("#toggle > span").click(function () {
+					var ix = $(this).index();
+					$("#individualCalendar").toggle(ix === 0);
+					$("#groupCalendar").toggle(ix === 1);
+				});
+			});
+		</script>
+		<script>
+			var navItems = document.querySelectorAll(".mobile-bottom-nav__item");
+			navItems.forEach(function (e, i) {
+				e.addEventListener("click", function (e) {
+					navItems.forEach(function (e2, i2) {
+						e2.classList.remove("mobile-bottom-nav__item--active");
+					})
+					this.classList.add("mobile-bottom-nav__item--active");
+				});
+			});
+		</script>
+	</body>
+
+</html>

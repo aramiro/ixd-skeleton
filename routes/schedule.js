@@ -29,6 +29,13 @@ import bootstrapPlugin from '@fullcalendar/bootstrap';
  */
 
 exports.view = function(req, res){
-	res.render('schedule');
+  res.render('schedule');
   };
 
+exports.view_A = function(req, res){
+  res.render('schedule_A');
+  };
+
+exports.view_B = function(req, res){
+  res.render('schedule_B');
+  };

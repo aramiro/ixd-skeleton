@@ -61,13 +61,15 @@ app.get('/data', function(req, res) {
 app.get('/', login.view);
 app.get('/index', index.view);
 app.get('/schedule', schedule.view);
+app.get('/schedule_A', schedule.view_A);
+app.get('/schedule_B', schedule.view_B);
 app.get('/messages', messages.view);
 app.get('/food', food.view);
 app.get('/settings', settings.view);
 app.get('/login', login.view);
 
 
-app.post('/check-username',function(req,res) {
+/*app.post('/check-username',function(req,res) {
 	var username = req.body.username;
 	var destination = req.body.destination || "private-page-1";
 	if (destination.search(/^[-A-Za-z0-9]+$/) == -1) {
@@ -99,7 +101,7 @@ app.post('/check-username',function(req,res) {
 		});
 	});
 });
-
+*/
 
 // Example route
 // app.get('/users', user.list);

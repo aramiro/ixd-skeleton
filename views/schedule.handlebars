@@ -21,6 +21,8 @@
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/bootstrap-theme.css" rel="stylesheet">
 		<link href="css/index.css" rel="stylesheet">
+		<link href="css/nav.css" rel="stylesheet">
+
 		<link href="css/schedule.css" rel="stylesheet">
 
 		<!--<link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
@@ -115,8 +117,9 @@
 
 			<div id="nudgeModal" class="modal" style="text-align: center;">
 				<div class="modal-content">
+					<span onclick="document.getElementById('nudgeModal').style.display='none'"
+						class="close">&times;</span>
 					<div class="modal-header">
-						<span onclick="document.getElementById('nudgeModal').style.display='none'" class="close">&times;</span>
 						<h2 id="nudge-title">Nudge person?</h2>
 					</div>
 					<div class="modal-body">
@@ -132,12 +135,14 @@
 
 		<div id="nudgeModalafter" class="modal" style="text-align: center;">
 			<div class="modal-content">
+				<span onclick="document.getElementById('nudgeModalafter').style.display='none'"
+					class="close">&times;</span>
 				<div class="modal-header">
-					<span onclick="document.getElementById('nudgeModalafter').style.display='none'" class="close">&times;</span>
 					<h2 id="nudge-title-after">Nudge Sent!</h2>
 				</div>
 				<div class="modal-body">
-					<button id="close" onclick="document.getElementById('nudgeModalafter').style.display='none'">close</button>
+					<button id="close"
+						onclick="document.getElementById('nudgeModalafter').style.display='none'">close</button>
 				</div>
 				<div class="modal-footer">
 
@@ -152,7 +157,7 @@
 				title="Close Modal">&times;</span>
 			<h1>Add Event</h1>
 			<!-- modal content -->
-			<form target="/index" class="model-content animate">
+			<form target="/schedule" class="model-content animate">
 
 				<div class="popupform">
 
