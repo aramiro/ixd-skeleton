@@ -18,6 +18,8 @@ var settings = require('./routes/settings');
 var mongodb = require('mongodb');
 var mongoose = require('mongoose');
 
+var Swal = require('sweetalert2');
+
 // Example route
 // var user = require('./routes/user');
 

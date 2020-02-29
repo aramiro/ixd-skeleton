@@ -52,8 +52,8 @@
 		<div class="container">
 			<header>
 				<div id="title toggle">
-					<span> <button><i class="fas fa-user individual"></i></button></span>
-					<span> <button><i class="fas fa-users group"></i></button></span>
+					<span> <button onclick="toggle_visibility('individualCalendar', 'groupCalendar')"><i class="fas fa-user individual"></i></button></span>
+					<span> <button onclick="toggle_visibility('groupCalendar', 'individualCalendar')"><i class="fas fa-users group"></i></button></span>
 
 					<div id="user">
 						<a href="/settings" data-target="/settings"><i class="far fa-user-circle fa-4x"></i></a>
@@ -64,11 +64,11 @@
 
 		<div class="container" style="height: 90%;">
 
-			<div id="individualCalendar">
+			<div id="groupCalendar">
 				<div id='calendar2'></div>
 			</div>
 
-			<div id="groupCalendar">
+			<div id="individualCalendar">
 				<div id='calendar'></div>
 			</div>
 
@@ -178,13 +178,24 @@
 			}
 		</script>
 		<script>
-			$(function () {
+/*			$(function () {
 				$("#toggle > span").click(function () {
 					var ix = $(this).index();
 					$("#individualCalendar").toggle(ix === 0);
 					$("#groupCalendar").toggle(ix === 1);
 				});
-			});
+			});*/
+
+			function toggle_visibility(id, id2) {
+				var toShow = document.getElementById(id);
+				var toHide = document.getElementById(id2);
+
+				if (toHide.style.display == 'block' || toHide.style.display == '') {
+					toHide.style.display = 'none'
+					toShow.style.display = "block"
+				}
+				else { toShow.style.display = 'block'}
+			}
 		</script>
 		<script>
 			var navItems = document.querySelectorAll(".mobile-bottom-nav__item");

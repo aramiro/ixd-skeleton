@@ -18,13 +18,15 @@
     "@fullcalendar/list": "^4.3.0",
     "@fullcalendar/timegrid": "^4.3.0",
     "@fullcalendar/timeline": "^4.3.0",
+    "@sweetalert2/themes": "^3.1.1",
     "express": "3.x",
     "express3-handlebars": "*",
     "json": "^9.0.6",
     "minimatch": "^3.0.4",
     "mongodb": "^3.5.4",
     "mongoose": "*",
-    "pg": "^7.18.1"
+    "pg": "^7.18.1",
+    "sweetalert2": "^9.8.2"
   },
   "engines": {
     "node": "8.9.x"
