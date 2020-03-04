@@ -41,17 +41,7 @@ button:hover {
   opacity: 0.8;
 }
 
-/* Center the avatar image inside this container */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
 
-/* Avatar image */
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
 
 /* Add padding to containers */
 .container .footer {
@@ -142,4 +132,22 @@ span.psw .footer {
   max-height: 800px;
   margin: 20px auto;
 }
+.rounded {
+  border-radius: 5px;
+}
 
+
+
+.fc-day-grid {
+  background-color: white;
+}
+
+.fc-widget-header {
+  background-color: #FA8072;
+}
+
+.fc-day-grid-container {
+  overflow:hidden;
+  height: 478px;
+  width: 100%
+}

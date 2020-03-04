@@ -20,7 +20,7 @@
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/bootstrap-theme.css" rel="stylesheet">
-		<link href="css/index.css" rel="stylesheet">
+		<link href="css/theme.css" rel="stylesheet">
 		<link href="css/nav.css" rel="stylesheet">
 
 		<link href="css/schedule.css" rel="stylesheet">
@@ -70,8 +70,10 @@
 		<div class="container">
 			<header>
 				<div id="title toggle">
-					<span> <button><i class="fas fa-user individual"></i></button></span>
-					<span> <button><i class="fas fa-users group"></i></button></span>
+					<span> <button onclick="toggle_visibility('individualCalendar', 'groupCalendar')" class="rounded"><i
+								class="fas fa-user individual"></i></button></span>
+					<span> <button onclick="toggle_visibility('groupCalendar', 'individualCalendar')" class="rounded"><i
+								class="fas fa-users group"></i></button></span>
 
 					<div id="user">
 						<a href="/settings" data-target="/settings"><i class="far fa-user-circle fa-4x"></i></a>
@@ -83,11 +85,11 @@
 		<div class="container" style="height: 90%;">
 
 			<div id="individualCalendar">
-				<div id='calendar2'></div>
+				<div id='calendar'></div>
 			</div>
 
 			<div id="groupCalendar">
-				<div id='calendar'></div>
+				<div id='calendar2'></div>
 			</div>
 
 			<!--Navigation Bar-->
@@ -196,6 +198,19 @@
 				</div>
 			</form>
 		</div>
+				<script>
+
+			function toggle_visibility(id, id2) {
+				var toShow = document.getElementById(id);
+				var toHide = document.getElementById(id2);
+
+				if (toHide.style.display == 'block' || toHide.style.display == '') {
+					toHide.style.display = 'none'
+					toShow.style.display = "block"
+				}
+				else { toShow.style.display = 'block' }
+			}
+		</script>
 		<script>
 			// Get the modal
 			var modal = document.getElementById('popup');

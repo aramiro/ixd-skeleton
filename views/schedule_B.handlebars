@@ -20,7 +20,7 @@
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/bootstrap-theme.css" rel="stylesheet">
-		<link href="css/index.css" rel="stylesheet">
+		<link href="css/theme.css" rel="stylesheet">
 		<link href="css/nav_B.css" rel="stylesheet">
 		<link href="css/schedule_B.css" rel="stylesheet">
 
@@ -28,7 +28,7 @@
 
 
 		<!-- calendar plugin api -->
-		<script src="js/schedules.js"></script>
+		<script src="js/schedule_B.js"></script>
 		<link href='fullcalendar/packages/core/main.css' rel='stylesheet' />
 		<link href='fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
 		<link href='fullcalendar/packages/timegrid/main.css' rel='stylesheet' />
@@ -56,13 +56,13 @@
 		</script>
 	</head>
 
-	<body style="background-color: #E5E5E5;">
+	<body style="background-color: #FFFCED;">
 		<div class="container">
 			<header>
 				<div id="title toggle">
-					<span> <button onclick="toggle_visibility('individualCalendar', 'groupCalendar')"><i
+					<span> <button onclick="toggle_visibility('individualCalendar', 'groupCalendar')" class="rounded"><i
 								class="fas fa-user individual"></i></button></span>
-					<span> <button onclick="toggle_visibility('groupCalendar', 'individualCalendar')"><i
+					<span> <button onclick="toggle_visibility('groupCalendar', 'individualCalendar')" class="rounded"><i
 								class="fas fa-users group"></i></button></span>
 
 					<div id="user">
@@ -72,9 +72,9 @@
 			</header>
 		</div>
 
-		<div class="container" style="height: 90%;">
+		<div class="container" style="height: 90%;" class="rounded">
 
-			<div id="groupCalendar">
+			<div id="groupCalendar" class="rounded">
 				<div id='calendar2'></div>
 			</div>
 
@@ -83,26 +83,26 @@
 			</div>
 
 			<!--Navigation Bar-->
-			<nav class="mobile-bottom-nav">
+			<nav class="mobile-bottom-nav" style="height: 10%;">
 				<div class="mobile-bottom-nav__item ">
 					<div class="mobile-bottom-nav__item-content">
-						<i class="fas fa-home"></i><br>Home
+						<i class="fas fa-home fa-3x"></i><br>Home
 					</div>
 				</div>
 				<div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
 					<div class="mobile-bottom-nav__item-content">
-						<i class="far fa-calendar-alt"></i><br>Schedule
+						<i class="far fa-calendar-alt fa-3x"></i><br>Schedule
 					</div>
 				</div>
 				<div class="mobile-bottom-nav__item">
 					<div class="mobile-bottom-nav__item-content">
-						<i class="fas fa-envelope"></i><br>Messages
+						<i class="fas fa-envelope fa-3x"></i><br>Messages
 					</div>
 				</div>
 
 				<div class="mobile-bottom-nav__item">
 					<div class="mobile-bottom-nav__item-content">
-						<i class="fas fa-utensils"></i><br>Fridge
+						<i class="fas fa-utensils fa-3x"></i><br>Fridge
 					</div>
 				</div>
 			</nav>

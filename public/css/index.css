@@ -1,7 +1,4 @@
-a:link {color:#000000;} /*unvisited link*/
-a:visited {color:#000000;} /*visited link*/
-a:hover {color: silver;} /*mouse over link*/
-a:active {color:silver;} /*selected link*/
+
 
 
 div.textBox {
@@ -25,12 +22,6 @@ ul.dashed > li:before {
 }
 
 
-#title  {
-  display: inline-block;
-}
-#user {
-  float: right;
-}
 
 .rounded {
   border-radius: 25px;
@@ -39,10 +30,3 @@ ul.dashed > li:before {
   height:95%;
 }
 
-header {
-  margin: 20px auto;
-}
-
-html, body {
-  height:100%;
-}
