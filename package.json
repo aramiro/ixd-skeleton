@@ -1,5 +1,5 @@
 {
-  "name": "IntroHCI",
+  "name": "com.cogs120.roommatereminder",
   "version": "0.0.1",
   "author": "Intro HCI Staff",
   "repository": {
@@ -21,6 +21,7 @@
     "@sweetalert2/themes": "^3.1.1",
     "express": "3.x",
     "express3-handlebars": "*",
+    "firebase": "^7.9.3",
     "json": "^9.0.6",
     "minimatch": "^3.0.4",
     "mongodb": "^3.5.4",

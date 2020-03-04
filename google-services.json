@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "231656984079",
+    "firebase_url": "https://roommate-reminder.firebaseio.com",
+    "project_id": "roommate-reminder",
+    "storage_bucket": "roommate-reminder.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:231656984079:android:fd6229924b6bc3962b9d7a",
+        "android_client_info": {
+          "package_name": "com.cogs120.roommatereminder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "231656984079-c4odtn7f5h4duoeg4k3fc5mmk69546va.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBChqaCzEsLJCwO59FyWrFSVcjyDxtC9vw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "231656984079-c4odtn7f5h4duoeg4k3fc5mmk69546va.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

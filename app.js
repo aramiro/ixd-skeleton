@@ -20,6 +20,18 @@ var mongoose = require('mongoose');
 
 var Swal = require('sweetalert2');
 
+const firebaseConfig = {
+	apiKey: "AIzaSyAcWIHZWzcPzGgb3yXvlfKblS88TjAxFEA",
+	authDomain: "roommate-reminder.firebaseapp.com",
+	databaseURL: "https://roommate-reminder.firebaseio.com",
+	projectId: "roommate-reminder",
+	storageBucket: "roommate-reminder.appspot.com",
+	messagingSenderId: "231656984079",
+	appId: "1:231656984079:web:3aa8d1d429fedaf72b9d7a",
+	measurementId: "G-VN6115B2PT"
+  };
+ 
+
 // Example route
 // var user = require('./routes/user');
 
