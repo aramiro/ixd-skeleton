@@ -49,7 +49,7 @@
 				</div>
 			</header>
 			<section>
-				<h2>{{firstname}}'s Weekly Tasks</h2>
+				<h2>My Weekly Tasks</h2>
 				<div class="rounded textBox">
 					<ul class="dashed">
 						<li>Trash</li>
@@ -118,8 +118,10 @@
 
 		<script>
 			var nameToShow = localStorage.getItem("firstname");
-			firstname = nameToShow;
-			console.log(nameToShow);
+			if (nameToShow != "") {
+				$('h2:contains("My Weekly Tasks")').text(nameToShow + "'s Weekly Tasks");
+			}
+
 		</script>
 	</body>
 

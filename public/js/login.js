@@ -24,6 +24,7 @@ $(document).ready(function() {
         if (myjson.users[user].username == userSearch) {
           if (psw == myjson.users[user].password) {
             localStorage.setItem("firstname", myjson.users[user].firstname);
+            localStorage.setItem("index", user);
             found = true;
             window.location.replace("/index");
             Toast.fire({
@@ -91,7 +92,9 @@ $(document).ready(function() {
       jsonstr = JSON.stringify(myjson);
       console.log(jsonstr);
       localStorage.setItem(myjson, jsonstr);
+      localStorage.setItem("firstname", user.firstname);
       window.location.replace("/index");
+
     });
   });
 });
