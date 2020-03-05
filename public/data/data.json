@@ -6,7 +6,7 @@
 			"lastname": "Kim",
 			"email": "spk004@ucsd.edu",
 			"houseID": "first",
-			"password": "12345",
+			"password": "roommate1",
 			"events": [
 				"trash",
 				"parking",
@@ -19,7 +19,7 @@
 			"lastname": "Ramiro",
 			"email": "aramiro@ucsd.edu",
 			"houseID": "first",
-			"password": "23451"
+			"password": "roommate2"
 		},
 		{
 			"username": "apurwashulka",
@@ -27,7 +27,7 @@
 			"lastname": "Shulka",
 			"email": "aashukla@ucsd.edu",
 			"houseID": "first",
-			"password": "34512"
+			"password": "roommate3"
 		},
 		{
 			"username": "user",
@@ -35,7 +35,7 @@
 			"lastname": "last",
 			"email": "user@ucsd.edu",
 			"houseID": "first",
-			"password": "45123",
+			"password": "roommate4",
 			"events": [
 				"Trash",
 				"Parking",
