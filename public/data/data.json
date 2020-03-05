@@ -1,0 +1,71 @@
+{
+	"users": [
+		{
+			"username": "stacykim",
+			"firstname": "Stacy",
+			"lastname": "Kim",
+			"email": "spk004@ucsd.edu",
+			"houseID": "first",
+			"password": "12345",
+			"events": [
+				"trash",
+				"parking",
+				"cleaning"
+			]
+		},
+		{
+			"username": "alyssaramiro",
+			"firstname": "Alyssa",
+			"lastname": "Ramiro",
+			"email": "aramiro@ucsd.edu",
+			"houseID": "first",
+			"password": "23451"
+		},
+		{
+			"username": "apurwashulka",
+			"firstname": "Apurwa",
+			"lastname": "Shulka",
+			"email": "aashukla@ucsd.edu",
+			"houseID": "first",
+			"password": "34512"
+		},
+		{
+			"username": "user",
+			"firstname": "first",
+			"lastname": "last",
+			"email": "user@ucsd.edu",
+			"houseID": "first",
+			"password": "45123",
+			"events": [
+				"Trash",
+				"Parking",
+				"Cleaning"
+			]
+		}
+	],
+	"households": [
+		{
+			"houseID": "first",
+			"members": [
+				{
+					"$oid": "5e5723cef7c3e83c50f16b8b"
+				},
+				{
+					"$oid": "5e5723e0f7c3e83c50f16b8c"
+				},
+				{
+					"$oid": "5e5723f1f7c3e83c50f16b8d"
+				},
+				{
+					"$oid": "5e572405f7c3e83c50f16b8e"
+				}
+			],
+			"events": [
+				"dishes",
+				"parking",
+				"cleaning",
+				""
+			]
+		}
+	]
+}

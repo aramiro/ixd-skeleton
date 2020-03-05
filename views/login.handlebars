@@ -16,7 +16,7 @@
 		<!--<script src="/js/bootstrap.js"></script>-->
 		<script src="/js/bootstrap.min.js"></script>
 		<script src="https://kit.fontawesome.com/425ceb4c07.js" crossorigin="anonymous"></script>
-
+		<script src="/js/login.js"></script>
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/bootstrap-theme.css" rel="stylesheet">
@@ -25,6 +25,7 @@
 
 		<link href='https://fonts.googleapis.com/css?family=Mogra' rel='stylesheet'>
 		<!--<link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -60,10 +61,9 @@
 					title="Close Modal">&times;</span>
 				<h1>Login</h1>
 				<!-- Modal content -->
-				<form action="/index" class="model-content animate">
+				<form class="model-content animate login">
 
 					<div class="imgcontainer">
-						<img src="#" alt="Avatar" class="avatar" hidden>
 						<i class="far fa-user-circle fa-4x"></i>
 					</div>
 
@@ -81,12 +81,11 @@
 								id="password" required>
 						</div>
 						<div>
-							<label class="form-check-label" for="rememberMe" id="remember">
-								<input type="checkbox" name="remember"> Remember me
+							<label class="form-check-label" for="rememberMe" >
+								<input type="checkbox" name="remember" id="remember"> Remember me
 							</label>
 						</div>
-						<button class="btn btn-primary btn-lg" type="submit">Login</button>
-
+						<input type="submit" value="Login" class="btn btn-primary btn-lg" id="submit">
 						<div class="form-group footer ">
 							<span class="psw">Forgot <a href="#">password?</a></span>
 						</div>
@@ -101,47 +100,48 @@
 						<span onclick="document.getElementById('signup').style.display='none'" class="close"
 							title="Close Modal">&times;</span>
 					</div>
-					<h1>Signup</h1>
+
 				</div>
 
 				<!-- modal content -->
-				<form action="/index" class="model-content animate">
-
+				<form class="model-content animate signup">
+					<h1 style="text-align: center;">Signup</h1>
 					<div class="signupform">
 						<div class="form-group col">
 							<label for="name"><b>First Name</b></label>
 							<input type="text" placeholder="Enter First name" name="firstname" class="form-control"
-								id="firstname" required>
+								id="fname" required>
 						</div>
 						<div class="form-group" id="lastname">
 							<label for="name"><b>Last Name</b></label>
-							<input type="text" placeholder="Enter Last name" name="lasttname" class="form-control"
+							<input type="text" placeholder="Enter Last name" name="lname" class="form-control"
+								id="lname" required>
+						</div>
+						<div class="form-group">
+							<label for="email"><b>Email</b></label>
+							<input type="email" placeholder="Enter Email" name="email" class="form-control" id="email"
 								required>
 						</div>
-						<div class="form-group" id="email">
-							<label for="email"><b>Email</b></label>
-							<input type="text" placeholder="Enter Email" name="email" class="form-control" required>
-						</div>
-						<div class="form-group" id="username">
+						<div class="form-group">
 							<label for="username"><b>Username</b></label>
 							<input type="text" placeholder="Enter username" name="username" class="form-control"
-								required>
+								id="susername" required>
 						</div>
 
-						<div class="form-group" id="password">
+						<div class="form-group">
 							<label for="password"><b>Password</b></label>
 							<input type="password" placeholder="Enter Password" name="password" class="form-control"
-								required>
+								id="spassword" required>
 						</div>
 
-						<div class="form-group" id="password-repeat">
+						<div class="form-group">
 							<label for="password"><b>Repeat Password</b></label>
 							<input type="password" placeholder="Repeat Password" name="password-repeat"
-								class="form-control" required>
+								class="form-control" id="password-repeat" required>
 						</div>
 						<div class="signup">
-							<label class="form-check-label" for="rememberMe" id="remember">
-								<input type="checkbox" name="remember"> Remember me
+							<label class="form-check-label" for="rememberMe">
+								<input type="checkbox" name="remember" id="sremember"> Remember me
 							</label>
 							<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms &
 									Privacy</a>.</p>
@@ -163,15 +163,16 @@
 				}
 			}
 		</script>
+
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
-		<script src="/__/firebase/7.9.3/firebase-app.js"></script>
+		<!--		<script src="/__/firebase/7.9.3/firebase-app.js"></script> -->
 
 		<!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-		<script src="/__/firebase/7.9.3/firebase-analytics.js"></script>
+		<!--		<script src="/__/firebase/7.9.3/firebase-analytics.js"></script> -->
 
 		<!-- Initialize Firebase -->
-		<script src="/__/firebase/init.js"></script>
+		<!--		<script src="/__/firebase/init.js"></script>-->
 	</body>
 
 </html>
