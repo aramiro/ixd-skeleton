@@ -34,7 +34,7 @@ body {
 	justify-content: center;
 }
 
-.mobile-bottom-nav__item--active {
+.mobile-bottom-nav__item--active a{
 	/*dev */
 	color: #FA8072;
 }

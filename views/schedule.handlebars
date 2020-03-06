@@ -92,45 +92,30 @@
 			</div>
 
 			<!--Navigation Bar-->
-			<nav class="navbar-fixed-bottom bottomNav">
-				<hr>
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse"
-						data-target=".navbar-ex1-collapse">
-						<i class="fas fa-bars fa-2x"></i>
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
+			<nav class="mobile-bottom-nav" style="height: 10%;">
+				<div class="mobile-bottom-nav__item ">
+					<div class="mobile-bottom-nav__item-content">
+						<a href="/index"><i class="fas fa-home fa-3x"></i><br>Home</a>
+					</div>
+				</div>
+				<div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+					<div class="mobile-bottom-nav__item-content">
+						<a href=""><i class="far fa-calendar-alt fa-3x"></i><br>Schedule</a>
+					</div>
+				</div>
+				<div class="mobile-bottom-nav__item">
+					<div class="mobile-bottom-nav__item-content">
+						<a href="/messages"><i class="fas fa-envelope fa-3x"></i><br>Messages</a>
+					</div>
 				</div>
 
-				<div class="collapse navbar-collapse navbar-ex1-collapse border-top">
-					<ul class="nav bottomNav">
-						<li class="text-center">
-							<a href="/index" data-toggle="collapse" data-target="/index">
-								<i class="fas fa-home fa-3x"></i><br>Home
-							</a>
-						</li>
-						<li class="text-center">
-							<a href="/schedule" data-toggle="collapse" data-target="/schedule">
-								<i class="far fa-calendar-alt fa-3x"></i><br>Schedule
-							</a>
-						</li>
-						<li class="text-center">
-							<a href="/messages" data-toggle="collapse" data-target="/messages">
-								<i class="fas fa-envelope fa-3x"></i><br>Messages
-							</a>
-						</li>
-						<li class="text-center">
-							<a href="/food" data-toggle="collapse" data-target="/fridge"><i
-									class="fas fa-utensils fa-3x"></i><br>Fridge
-							</a>
-						</li>
-					</ul>
+				<div class="mobile-bottom-nav__item">
+					<div class="mobile-bottom-nav__item-content">
+						<a href="/food"><i class="fas fa-utensils fa-3x"></i><br>Shared</a>
+					</div>
 				</div>
 			</nav>
+
 			<!-- end of Navigation Bar -->
 
 			<div id="nudgeModal" class="modal" style="text-align: center;">

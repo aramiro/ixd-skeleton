@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
     events: {
       googleCalendarId:
 		"ucsd.edu_87nar99a1vmecvl0g75e4ubs4s@group.calendar.google.com"
-		
     },
+    eventColor:'lavender',
     dateClick: function(info) {
       //alert('Clicked on: ' + info.dateStr);
       //alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       $("#popup").css("display", "block");
     },
-    eventClick: function(info) {
+    eventClick: function(info, $el) {
       info.jsEvent.preventDefault(); // don't let the browser navigate
 
     /*  var modal = document.getElementById("nudgeModal");
@@ -66,8 +66,22 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       };*/
       // change the border color just for fun
+
+    
       info.el.style.borderColor = "red";
+    },
+
+
+/*    eventRender: function(eventObj, $el) {
+      $el.popover({
+        title: eventObj.title,
+        content: eventObj.description,
+        trigger: 'hover',
+        placement: 'top',
+        container: 'body'
+      });
     }
+    */
   });
 
   var gcalendar = new FullCalendar.Calendar(groupCalendarE1, {
@@ -98,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function() {
       googleCalendarId:
         "ucsd.edu_dfuugi6lj86saaqjrnkfgdfd6s@group.calendar.google.com"
     },
+    eventColor:'lavender',
     dateClick: function(info) {
       //alert('Clicked on: ' + info.dateStr);
       //alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);

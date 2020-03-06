@@ -5,10 +5,7 @@ Woodie, Justin. How to Create A Smooth HTML Calendar With CSS. http://blog.justi
 */
 
 
-a:link {color:#000000;} /*unvisited link*/
-a:visited {color:#000000;} /*visited link*/
-a:hover {color: silver;} /*mouse over link*/
-a:active {color:silver;} /*selected link*/
+
 
 
 form {
