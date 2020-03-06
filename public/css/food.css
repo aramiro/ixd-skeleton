@@ -58,7 +58,7 @@ div#list ul li:hover {
 	text-align: center;
   }
   .header {
-	  background-color: lightgray;
+	  background-color: #FFE5B4;
 	  padding: 30px 40px;
 	  color: black;
 	  text-align: center;
@@ -85,7 +85,7 @@ input {
   .addBtn {
 	padding: 10px;
 	width: 25%;
-	background: gray;
+	background:#FA8072;
 	color: black;
 	float: left;
 	text-align: center;

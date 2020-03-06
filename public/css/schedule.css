@@ -27,13 +27,17 @@ input[type="password"] {
 
 /* Set a style for all buttons */
 button {
-  background-color: black;
+  background-color: #FFE5B4;
   color: white;
   padding: 14px 20px;
   margin: 2px auto;
   border: none;
   cursor: pointer;
  
+}
+
+button.activeCal{
+  background-color: #FFD17C;
 }
 
 /* Add a hover effect for buttons */
@@ -131,7 +135,7 @@ span.psw .footer {
 #title button {
   width: 20%;
 }
-#groupCalendar {
+#individualCalendar {
   display: none;
 }
 
@@ -141,4 +145,36 @@ span.psw .footer {
   max-width: 900px;
   max-height: 800px;
   margin: 20px auto;
+}
+
+
+.rounded {
+  border-radius: 5px;
+}
+
+
+.fc-day-grid {
+  background-color: white;
+}
+
+.fc-widget-header {
+  background-color: #FA8072;
+}
+
+.fc-day-grid-container {
+  overflow:hidden;
+  height: 478px;
+  width: 100%
+}
+
+/*.fc-right .fc-prev-button, .fc-right .fc-next-button, .fc-button.fc-button-primary{
+  background-color: #FFE5B4;
+  background-image: none;
+  border-color: #FFE5B4;
+}*/
+
+.fc-button-primary:not(:disabled):active, .fc-button-primary:not(:disabled).fc-button-active {
+  color: #fff;
+  background-color: #1a252f;
+  border-color: #151e27;
 }

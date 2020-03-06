@@ -2,7 +2,7 @@
 
 
 div.textBox {
-  background-color: white;
+  background-color: #FFE5B4;
 }
 
 
@@ -12,16 +12,12 @@ ul.dashed {
   list-style-type: none;
 }
 
-ul.dashed > li {
-  text-indent: -5px;
+ul.dashed li:before {
+  content: '\2014';
+  position: absolute;
+  margin-left: -20px;
+  color: #c48024;
 }
-
-ul.dashed > li:before {
-  content: "-";
-  text-indent: -5px;
-}
-
-
 
 .rounded {
   border-radius: 25px;

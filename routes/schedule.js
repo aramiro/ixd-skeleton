@@ -39,3 +39,5 @@ exports.view_A = function(req, res){
 exports.view_B = function(req, res){
   res.render('schedule_B');
   };
+
+
