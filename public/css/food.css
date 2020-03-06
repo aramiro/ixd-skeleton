@@ -15,7 +15,7 @@ div#list ul li {
 	cursor: pointer;
 	position: relative;
 	padding: 12px 8px 12px 40px;
-	background: lightgrey;
+	background: #FFE5B4;
 	font-size: 18px;
 	transition: 0.2s;
   
@@ -33,7 +33,7 @@ div#list ul li:nth-child(odd) {
 
   /* Darker background-color on hover */
 div#list ul li:hover {
-	background: darkgrey;
+	background: lightblue;
   }
 
 
@@ -58,7 +58,7 @@ div#list ul li:hover {
 	text-align: center;
   }
   .header {
-	  background-color: #FFE5B4;
+	  background-color: #ffc6b4;
 	  padding: 30px 40px;
 	  color: black;
 	  text-align: center;
@@ -96,5 +96,5 @@ input {
   }
   
   .addBtn:hover {
-	background-color: skyblue;
+	background-color: #c34920;
   }
