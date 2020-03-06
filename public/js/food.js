@@ -45,6 +45,33 @@ function newElement() {
       div.style.display = "none";
     }
   }
+  localStorage.setItem("item", t);
+
+  /*$.getJSON("/data/data.json", function(json) {
+    myjson = json;
+    for (user in myjson.users) {
+      if (myjson.users[user].username == userSearch) {
+        if (psw == myjson.users[user].password) {
+          localStorage.setItem("firstname", myjson.users[user].firstname);
+          localStorage.setItem("index", user);
+          found = true;
+          window.location.replace("/index");
+          Toast.fire({
+            icon: "success",
+            title: "Signed in successfully"
+          });
+        } 
+      }
+    }
+    
+
+  });*/
 }
 
+
+function populate() {
+  var t = localStorage.getItem("item");
+  var li = document.createElement("li");
+  li.appendChild(t);
+}
 
