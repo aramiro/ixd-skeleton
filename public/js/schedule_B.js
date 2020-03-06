@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	},
     events: {
       googleCalendarId:
-        "ucsd.edu_dfuugi6lj86saaqjrnkfgdfd6s@group.calendar.google.com"
+        "ucsd.edu_dfuugi6lj86saaqjrnkfgdfd6s@group.calendar.google.com",  eventColor: '#ff9900'
     },
     dateClick: function(info) {
       //alert('Clicked on: ' + info.dateStr);

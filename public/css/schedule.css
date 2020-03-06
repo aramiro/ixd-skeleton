@@ -37,7 +37,7 @@ button {
 }
 
 button.activeCal{
-  background-color: #FFD17C;
+  background-color: #ff9900;
 }
 
 /* Add a hover effect for buttons */
@@ -167,14 +167,25 @@ span.psw .footer {
   width: 100%
 }
 
-/*.fc-right .fc-prev-button, .fc-right .fc-next-button, .fc-button.fc-button-primary{
-  background-color: #FFE5B4;
+.fc-right .fc-prev-button, .fc-right .fc-next-button, .fc-button.fc-button-primary{
+  background-color: #ff9900;
   background-image: none;
-  border-color: #FFE5B4;
-}*/
+  border-color: #ff9900;
+}
 
-.fc-button-primary:not(:disabled):active, .fc-button-primary:not(:disabled).fc-button-active {
+.fc-dayGridMonth-button.fc-button-primary:not(:disabled):active, .fc-dayGridMonth-button.fc-button-primary:not(:disabled).fc-button-active,
+.fc-timeGridWeek-button.fc-button-primary:not(:disabled):active, .fc-timeGridWeek-button.fc-button-primary:not(:disabled).fc-button-active,
+.fc-timeGridDay-button.fc-button-primary:not(:disabled):active, .fc-timeGridDay-button.fc-button-primary:not(:disabled).fc-button-active {
   color: #fff;
-  background-color: #1a252f;
-  border-color: #151e27;
+  background-color: #ff9900;
+  border-color: #ff9900;
+}
+.fc-today-button.fc-button-primary:disabled {
+  background-color: #FFE5B4;
+  border-color: #FFE5B4;
+}
+
+.fc-today-button.fc-button.fc-button-primary{
+  background-color: #ff9900;
+  border-color: #ff9900;
 }

@@ -35,8 +35,8 @@ body {
 }
 
 .mobile-bottom-nav__item--active {
-	/*/dev */
-	color: red;
+	/*dev */
+	color: #FA8072;
 }
 
 .mobile-bottom-nav__item-content {

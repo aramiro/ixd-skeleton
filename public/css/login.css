@@ -1,10 +1,10 @@
-/* Bordered form */
+/* Bordered form 
 form {
   border: 3px solid #f1f1f1;
-}
+}*/
 
 
-body h1, button{
+h1{
   font-family: 'Mogra';
 }
 
@@ -32,7 +32,7 @@ input[type="email"] {
 
 /* Set a style for all buttons */
 button {
-  background-color: lightblue;
+  background-color: #FFE5B4;
   color: white;
   padding: 14px 20px;
   margin: 8px auto;
@@ -86,7 +86,7 @@ span.psw .footer {
   overflow: auto;
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: #FFE5B4;
 }
 
 .modal-content { 
