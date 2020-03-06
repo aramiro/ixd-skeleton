@@ -2,16 +2,16 @@ $(document).ready(function() {
   $("form.login").on("submit", function(event) {
     const Toast = Swal.mixin({
       toast: true,
-      position: 'top-end',
+      position: "top-end",
       showConfirmButton: false,
       timer: 3000,
       timerProgressBar: true,
-      onOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      onOpen: toast => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
       }
-    })
-    
+    });
+
     event.preventDefault();
     var userSearch = $("#username").val();
     var psw = $("#password").val();
@@ -28,9 +28,9 @@ $(document).ready(function() {
             found = true;
             window.location.replace("/index");
             Toast.fire({
-              icon: 'success',
-              title: 'Signed in successfully'
-            })
+              icon: "success",
+              title: "Signed in successfully"
+            });
           } else {
             Swal.fire({
               title: "Error!",
@@ -76,26 +76,25 @@ $(document).ready(function() {
         icon: "error",
         confirmButtonText: "Okay"
       });
+    } else {
+      user.firstname = $("#fname").val();
+      user.lastname = $("#lname").val();
+      user.username = $("#susername").val();
+      user.email = $("#email").val();
+      user.password = psw;
+      user.houseID = "";
+      $.getJSON("/data/data.json", function(json) {
+        myjson = json;
+        console.log(user);
+        myjson.users.push(user);
+
+        jsonstr = JSON.stringify(myjson);
+        console.log(jsonstr);
+        localStorage.setItem(myjson, jsonstr);
+        localStorage.setItem("firstname", user.firstname);
+        window.location.replace("/index");
+      });
     }
-    user.firstname = $("#fname").val();
-    user.lastname = $("#lname").val();
-    user.username = $("#susername").val();
-    user.email = $("#email").val();
-    user.password = psw;
-    user.houseID = "";
-
-    $.getJSON("/data/data.json", function(json) {
-      myjson = json;
-      console.log(user);
-      myjson.users.push(user);
-
-      jsonstr = JSON.stringify(myjson);
-      console.log(jsonstr);
-      localStorage.setItem(myjson, jsonstr);
-      localStorage.setItem("firstname", user.firstname);
-      window.location.replace("/index");
-
-    });
   });
 });
 
