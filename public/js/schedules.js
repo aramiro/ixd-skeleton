@@ -1,3 +1,16 @@
+
+function nudge() {
+  Swal.fire({
+    title: 'Nudge?',
+    confirmButtonText: "Nudge",
+    cancelButtonColor: '#d33'
+  }).then((result) => {
+    if(result.value) {
+      Swal.Fire('Nudged!', 'You have nudged them.', 'success')
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   var indCalendarE1 = document.getElementById("calendar");
   var groupCalendarE1 = document.getElementById("calendar2");
@@ -125,13 +138,24 @@ document.addEventListener("DOMContentLoaded", function() {
     eventClick: function(info) {
       info.jsEvent.preventDefault(); // don't let the browser navigate
 
-      var modal = document.getElementById("nudgeModal");
+    /*  var modal = document.getElementById("nudgeModal");
       var span = document.getElementsByClassName("close")[0];
       var cancel = document.getElementById("closebtn");
       var nudge = document.getElementById("nudge");
-      modal.style.display = "block";
+      modal.style.display = "block";*/
+     var name = info.el.classList[7];
+      Swal.fire({
+        title: 'Nudge ' + name + '?',
+        icon: 'question',
+        confirmButtonText: "Nudge",
+        cancelButtonColor: '#d33',
+      }).then((result) => {
+        if(result.value) {
+          Swal.fire('Nudged!', 'Nudge sent to ' + name + '.', 'success')
+        }
+      });
 
-      span.onclick = function() {
+  /*    span.onclick = function() {
         modal.style.display = "none";
       };
       cancel.onclick = function() {
@@ -147,10 +171,39 @@ document.addEventListener("DOMContentLoaded", function() {
         if (event.target == modal) {
           modal.style.display = "none";
         }
-      };
+      };*/
       // change the border color just for fun
       info.el.style.borderColor = "red";
+    },
+    eventRender: function(info) {
+      var desc = JSON.stringify(info.event.extendedProps.description);
+      //var house = JSON.parse(localStorage.getItem("household"));
+      //console.log(desc);
+      //console.log(info.el.id);
+
+      if(desc.includes("Alyssa")) {
+        info.el.style.backgroundColor = "Plum";
+        info.el.classList.add("Alyssa");
+      } else if(desc.includes("Apurwa")) {
+        info.el.style.backgroundColor = "SpringGreen";
+        info.el.classList.add("Apurwa");
+      }
+      else if (desc.includes("Stacy")) {
+        info.el.style.backgroundColor = "Salmon";
+        info.el.classList.add("Stacy");
+        
+      } else if (desc.includes("User")) {
+        info.el.style.backgroundColor = "PeachPuff";
+        info.el.classList.add("User");
+      }
+      else {
+        info.el.style.backgroundColor = "Red";
+      }
+
+
+
     }
+
   });
   gcalendar.setOption('Height', 650);
 
@@ -158,4 +211,7 @@ document.addEventListener("DOMContentLoaded", function() {
   icalendar.setOption('Height', 650);
   gcalendar.render();
 });
+
+
+
 

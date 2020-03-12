@@ -22,9 +22,12 @@
 		<link href="css/bootstrap-theme.css" rel="stylesheet">
 		<link href="css/theme.css" rel="stylesheet">
 		<link href="css/nav.css" rel="stylesheet">
+		<link href="css/settings.css" rel="stylesheet">
+
+		<script src="js/settings.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 		<!--<link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
-
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-6MGFFN3SZJ"></script>
 		<script>
@@ -50,7 +53,56 @@
 				</div>
 			</header>
 			<section>
+				<h2></h2>
+				<div class="rounded textBox">
+					<div class="rounded reminder">
+						<div class="box1">
+							<p>Login Details</p>
+						</div>
+						<div class="box2" id="details">
+							<i class="fas fa-chevron-right fa-3x"></i>
+						</div>
 
+					</div>
+
+					<div class="rounded reminder">
+						<div class="box1">
+							<p>Roommates</p>
+						</div>
+						<div class="box2" id="roommates">
+							<i class="fas fa-chevron-right fa-3x"></i>
+						</div>
+
+					</div>
+
+					<div class="rounded reminder">
+						<div class="box1">
+							<p>Notifcations</p>
+						</div>
+						<div class="box2">
+							<!-- Rounded switch -->
+							<label class="switch">
+								<input type="checkbox" id="notif">
+								<span class="slider round"></span>
+							</label>
+						</div>
+
+					</div>
+
+					<div class="rounded reminder">
+						<div class="box1">
+							<p>Do Not Disturb</p>
+						</div>
+						<div class="box2">
+							<!-- Rounded switch -->
+							<label class="switch">
+								<input type="checkbox" id="disturb">
+								<span class="slider round"></span>
+							</label>
+						</div>
+
+					</div>
+				</div>
 			</section>
 			<!--Navigation Bar-->
 			<nav class="mobile-bottom-nav" style="height: 10%;">
@@ -72,7 +124,7 @@
 
 				<div class="mobile-bottom-nav__item">
 					<div class="mobile-bottom-nav__item-content">
-						<a href="/food"><i class="fas fa-utensils fa-3x"></i><br>Fridge</a>
+						<a href="/shared"><i class="fas fa-utensils fa-3x"></i><br>Shared</a>
 					</div>
 				</div>
 			</nav>
@@ -89,6 +141,14 @@
 
 		<!-- Initialize Firebase -->
 		<script src="/__/firebase/init.js"></script>
+
+		<script>
+			var nameToShow = localStorage.getItem("firstname");
+			if (nameToShow != "") {
+				$('h2:contains("")').text(nameToShow);
+			}
+
+		</script>
 	</body>
 
 </html>

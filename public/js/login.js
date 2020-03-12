@@ -2,7 +2,7 @@ $(document).ready(function() {
   $("form.login").on("submit", function(event) {
     const Toast = Swal.mixin({
       toast: true,
-      position: "top-end",
+     // position: "top-end",
       showConfirmButton: false,
       timer: 3000,
       timerProgressBar: true,
@@ -24,7 +24,9 @@ $(document).ready(function() {
         if (myjson.users[user].username == userSearch) {
           if (psw == myjson.users[user].password) {
             localStorage.setItem("firstname", myjson.users[user].firstname);
-            localStorage.setItem("index", user);
+            localStorage.setItem("user", JSON.stringify(myjson.users[user]));
+            localStorage.setItem("household", JSON.stringify(myjson.households[myjson.users[user].houseID]));
+            localStorage.setItem("logout", 0);
             found = true;
             window.location.replace("/index");
             Toast.fire({

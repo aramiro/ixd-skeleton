@@ -5,8 +5,9 @@
 			"firstname": "Stacy",
 			"lastname": "Kim",
 			"email": "spk004@ucsd.edu",
-			"houseID": "first",
+			"houseID": "0",
 			"password": "roommate1",
+			"id": "0",
 			"events": [
 				"trash",
 				"parking",
@@ -18,7 +19,8 @@
 			"firstname": "Alyssa",
 			"lastname": "Ramiro",
 			"email": "aramiro@ucsd.edu",
-			"houseID": "first",
+			"houseID": "0",
+			"id": "1",
 			"password": "roommate2"
 		},
 		{
@@ -26,7 +28,8 @@
 			"firstname": "Apurwa",
 			"lastname": "Shulka",
 			"email": "aashukla@ucsd.edu",
-			"houseID": "first",
+			"houseID": "0",
+			"id": "2",
 			"password": "roommate3"
 		},
 		{
@@ -34,7 +37,8 @@
 			"firstname": "user",
 			"lastname": "last",
 			"email": "user@ucsd.edu",
-			"houseID": "first",
+			"houseID": "0",
+			"id": "3",
 			"password": "roommate4",
 			"events": [
 				"Trash",
@@ -45,19 +49,20 @@
 	],
 	"households": [
 		{
-			"houseID": "first",
+			"houseID": "0",
+			"houseCode": "first",
 			"members": [
 				{
-					"$oid": "5e5723cef7c3e83c50f16b8b"
+					"id": "0"
 				},
 				{
-					"$oid": "5e5723e0f7c3e83c50f16b8c"
+					"id": "1"
 				},
 				{
-					"$oid": "5e5723f1f7c3e83c50f16b8d"
+					"id": "2"
 				},
 				{
-					"$oid": "5e572405f7c3e83c50f16b8e"
+					"id": "3"
 				}
 			],
 			"events": [
@@ -65,7 +70,9 @@
 				"parking",
 				"cleaning",
 				""
-			]
+			],
+			"shared": []
+
 		}
 	]
 }

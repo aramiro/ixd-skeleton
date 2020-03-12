@@ -13,7 +13,7 @@ var login = require('./routes/login');
 var index = require('./routes/index');
 var schedule = require('./routes/schedule');
 var messages = require('./routes/messages');
-var food = require('./routes/food');
+var shared = require('./routes/shared');
 var settings = require('./routes/settings');
 var mongodb = require('mongodb');
 var mongoose = require('mongoose');
@@ -78,7 +78,7 @@ app.get('/schedule', schedule.view);
 app.get('/schedule_A', schedule.view_A);
 app.get('/schedule_B', schedule.view_B);
 app.get('/messages', messages.view);
-app.get('/food', food.view);
+app.get('/shared', shared.view);
 app.get('/settings', settings.view);
 app.get('/login', login.view);
 
