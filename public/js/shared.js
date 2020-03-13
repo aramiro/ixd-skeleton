@@ -16,23 +16,25 @@ for (i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     var div = this.parentElement;
     div.style.display = "none";
-  }
+  };
 }
-
 
 // Create a new list item when clicking on the "Add" button
 function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("userInput").value;
-  var t = document.createTextNode(inputValue);
+  var timeInput = document.getElementById("userTime");
+  var time = new Date(timeInput.value);
+  var input = inputValue + " @ " + time.toDateString() + " " + time.toLocaleTimeString();
+  var t = document.createTextNode(input);
   li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
+  if (inputValue === "" || timeInput.value === "") {
+    Swal.fire("Error!", "You must type something!", "error");
   } else {
     document.getElementById("sharedItems").appendChild(li);
   }
   document.getElementById("userInput").value = "";
-
+  document.getElementById("userTime").value = "";
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
   span.className = "close";
@@ -43,23 +45,25 @@ function newElement() {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
-    }
+    };
   }
-  localStorage.setItem("item", t);
+
+  var shared = JSON.parse(localStorage.getItem("shared"));
+
+  shared.push(input);
+  console.log(shared);
+  localStorage.setItem("shared", JSON.stringify(shared));
 
   /*$.getJSON("/data/data.json", function(json) {
     myjson = json;
+
     for (user in myjson.users) {
       if (myjson.users[user].username == userSearch) {
         if (psw == myjson.users[user].password) {
           localStorage.setItem("firstname", myjson.users[user].firstname);
           localStorage.setItem("index", user);
           found = true;
-          window.location.replace("/index");
-          Toast.fire({
-            icon: "success",
-            title: "Signed in successfully"
-          });
+
         } 
       }
     }
@@ -68,10 +72,18 @@ function newElement() {
   });*/
 }
 
+/*function populate() {
+  var shared = JSON.parse(localStorage.getItem("shared"));
+  if(shared.length == 0){
 
-function populate() {
-  var t = localStorage.getItem("item");
-  var li = document.createElement("li");
-  li.appendChild(t);
+  }
+  for (item in shared) {
+    console.log(item);
+  }
+
 }
 
+$(document).ready(function() {
+  populate();
+});
+*/

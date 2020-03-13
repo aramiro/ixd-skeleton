@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function() {
      var name = info.el.classList[7];
       Swal.fire({
         title: 'Nudge ' + name + '?',
+        text: info.event.extendedProps.description,
         icon: 'question',
         confirmButtonText: "Nudge",
         cancelButtonColor: '#d33',

@@ -26,6 +26,8 @@ $(document).ready(function() {
             localStorage.setItem("firstname", myjson.users[user].firstname);
             localStorage.setItem("user", JSON.stringify(myjson.users[user]));
             localStorage.setItem("household", JSON.stringify(myjson.households[myjson.users[user].houseID]));
+            localStorage.setItem("shared", myjson.households[myjson.users[user].houseID].shared);
+            //console.log(myjson.households[myjson.users[user].houseID].shared);
             localStorage.setItem("logout", 0);
             found = true;
             window.location.replace("/index");
